@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
@@ -48,14 +48,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: "inherit",
   "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create("width"),
     width: "100%",
     [theme.breakpoints.up("sm")]: {
-      width: "12ch",
+      width: "1ch",
       "&:focus": {
-        width: "20ch",
+        width: "12ch",
       },
     },
   },
@@ -63,12 +62,12 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Navbar() {
   const theme = useTheme();
-
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const [style, setStyle] = useState({ backgroundColor: "white" });
 
   return (
     <MainLayout>
-      <nav className={styles.burger_menu}>
+      <nav className={styles.burger_menu} style={style}>
         <div className={styles.first_nav}>
           <ul className={styles.first_nav_logo}>
             <li>
@@ -183,7 +182,6 @@ export default function Navbar() {
                       <Button
                         className={styles.button_construction}
                         variant="h6"
-                        // color="inherit"
                         component="div"
                         style={{ pointerEvents: "none" }}
                       >
@@ -193,7 +191,6 @@ export default function Navbar() {
 
                     <div className={styles.search_icon}>
                       <div className={styles.lang}>
-                        {" "}
                         <FormControl fullWidth>
                           <NativeSelect
                             defaultValue={30}
@@ -208,7 +205,10 @@ export default function Navbar() {
                         </FormControl>
                       </div>
 
-                      <Search className={styles.search_main}>
+                      <Search
+                        className={styles.search_main}
+                        onClick={() => setStyle({ backgroundColor: "black" })}
+                      >
                         <SearchIconWrapper>
                           <SearchIcon />
                         </SearchIconWrapper>

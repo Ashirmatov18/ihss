@@ -11,7 +11,8 @@
   list-style-type: none;
 }
 
-.second_nav {
+.search_active {
+  background-color: black;
 }
 
 .navbar_info {
@@ -22,7 +23,6 @@
 
 .toolbar {
   display: flex;
-  /* justify-content: space-evenly; */
 }
 
 .button_construction {
