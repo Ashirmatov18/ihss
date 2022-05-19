@@ -1,0 +1,27 @@
+.calc_title_name {
+  font-weight: 700 bold;
+  font-size: 48px;
+  margin-left: 130px;
+  /* line-height: 4px; */
+  height: 58px;
+  margin-bottom: 0;
+}
+
+.calc_title_line {
+  width: 510px;
+  margin-left: 0;
+  height: 9px;
+  /* border: none; */
+  background-color: #00512e;
+  margin-bottom: 50px;
+}
+
+.main_address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.adress_map {
+  margin-bottom: 150px;
+}

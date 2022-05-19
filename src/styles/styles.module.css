@@ -1,0 +1,151 @@
+.first_nav {
+  background-color: #fff;
+  width: 100%;
+  position: static;
+  /* height: 30px; */
+}
+
+.first_nav_logo {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.second_nav {
+}
+
+.navbar_info {
+  display: flex;
+  justify-content: space-around;
+  width: 520px;
+}
+
+.toolbar {
+  display: flex;
+  /* justify-content: space-evenly; */
+}
+
+.button_construction {
+  background-color: #ffd600;
+  color: #fff !important;
+  font-size: 13px;
+  width: 180px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.search_icon {
+  display: flex;
+  /* justify-content: space-around; */
+  margin-left: 40px;
+  position: relative;
+  /* padding-left: 40px; */
+}
+.about {
+  font-size: 18px;
+  font-weight: normal;
+  position: relative;
+}
+
+.search_main {
+  position: absolute;
+  margin-left: 70px;
+}
+
+.lang {
+  width: 70px;
+}
+.logo_social {
+  margin-left: 25px;
+}
+
+.social_network {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.burger_menu {
+  flex-wrap: wrap;
+}
+
+.click[type="checkbox"] {
+  display: none;
+}
+
+.example {
+  width: 300px;
+  background-color: red;
+}
+
+.first_number {
+  list-style-type: none;
+}
+.first_adaptive {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 40px;
+  /* padding-left: 0; */
+}
+
+.second_adaptive {
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 18px; */
+}
+.icons {
+  padding-left: 15px;
+}
+
+.third_adaptive {
+  margin-top: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo_ihs {
+  background-image: url("/img/main_logo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 70px;
+  height: 50px;
+}
+
+@media (max-width: 920px) {
+  .fas_fa_bars {
+    display: block;
+  }
+  .click:checked ~ .menu_btn i:before {
+    content: "\f00d";
+  }
+  .first_nav {
+    display: none;
+  }
+}
+
+.iconButtonContainer {
+  margin-left: auto !important;
+  background-color: white !important;
+  width: 100px;
+  height: 50px;
+}
+
+.popup_window {
+  position: absolute;
+  width: 180px;
+  height: 140px;
+  top: 50px;
+  z-index: 99;
+  left: 0px;
+  /* border: 2px solid black; */
+  background-color: white;
+  font-size: 18px;
+  color: #000;
+  padding-top: 30px;
+  display: none;
+  text-align: center;
+}
+
+.about:hover span {
+  display: block;
+}

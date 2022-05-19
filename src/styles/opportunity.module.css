@@ -1,0 +1,214 @@
+.main_info {
+  height: 950px;
+  background-image: url("/img/main_info.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  min-width: 100vw;
+  margin-left: calc(50% - 49.5vw);
+  margin-right: calc(50% - 49.4vw);
+  position: relative;
+}
+
+.info_content {
+  padding: 0 50px;
+}
+
+.strong_name {
+  font-size: 30px;
+}
+
+.info_stats {
+  display: flex;
+  justify-content: end;
+  padding-top: 100px;
+  color: white;
+}
+
+.stat {
+  margin-right: 100px;
+}
+
+.bottom_info {
+  color: white;
+}
+
+.main_char {
+  font-weight: 700 bold;
+  font-size: 74px;
+}
+
+.butt {
+  width: 280px;
+  height: 60px;
+  top: 184px;
+  border-radius: 10px;
+  padding: 20px, 10px, 20px, 10px;
+  gap: 10px;
+  background-color: #ffd600;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.opportunity_text {
+  margin-left: 130px;
+  margin-top: 60px;
+}
+
+.contact_us {
+  height: 150px;
+  background-color: #fff;
+  width: 80px;
+  border-radius: 45px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  justify-content: right;
+  margin-right: 30px;
+}
+
+.modal_winow {
+  width: 340px;
+  height: 550px;
+  position: absolute;
+  z-index: 9999;
+  background-color: #fff;
+  /* border: black solid; */
+  border-radius: 25px;
+  bottom: 0;
+  right: 0;
+}
+
+.open_line {
+  background-color: #00512e;
+  height: 60px;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+  border-radius: 25px 0 0;
+}
+
+.helpers {
+  margin-top: 120px;
+}
+
+.online {
+  text-align: center;
+  color: #00512e;
+}
+
+.team {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+.team_helpers p {
+  margin-top: 5px;
+  font-weight: 450;
+}
+
+.feedback {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #f4f4f4;
+  border: #f4f4f4;
+  /* border-radius: 15px; */
+  border-radius: 0 0 25px 25px;
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .main_info {
+    width: 100%;
+    height: 1200px;
+  }
+  .opportunity_text {
+    margin-left: 40px;
+    /* margin-top: 200px; */
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .main_info {
+    width: 100%;
+    height: 1200px;
+  }
+  .opportunity_text {
+    margin-left: 40px;
+    /* margin-top: 200px; */
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .stat {
+    margin-right: 50px;
+  }
+  .modal_winow {
+    display: none;
+  }
+  .contact {
+    display: none;
+  }
+}
+@media only screen and (max-width: 680px) {
+  .main_info {
+    height: 900px;
+    margin-bottom: 70px;
+  }
+  .info_stats {
+    justify-content: space-between;
+  }
+  .main_char {
+    font-size: 25px;
+  }
+  .stat {
+    margin-right: 30px;
+  }
+  .strong_name {
+    font-size: 25px;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  .button_follow {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 530px) {
+  .opportunity_text {
+    margin-left: 10px;
+  }
+
+  .halal {
+    margin-top: 10px;
+  }
+  .main_char br {
+    display: none;
+  }
+  .main_char {
+    text-align: center;
+    margin-top: 45px;
+  }
+  .stat {
+    /* margin-right: 20px; */
+    margin-top: 20px;
+    font-size: 10px;
+  }
+  .info_stats {
+    margin-left: -45px;
+  }
+  .strong_name {
+    font-size: 15px;
+  }
+}

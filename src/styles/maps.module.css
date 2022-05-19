@@ -1,0 +1,177 @@
+.main_calc {
+  margin-top: 100px;
+}
+
+.calc_title_name {
+  font-weight: 700 bold;
+  font-size: 48px;
+  /* line-height: 4px; */
+  height: 58px;
+  margin-bottom: 0;
+}
+
+.calc_title_line {
+  width: 50vw;
+  margin-left: calc(50% - 50vw);
+  height: 9px;
+  /* border: none; */
+  background-color: #00512e !important;
+}
+
+.kg_map_info {
+  margin-top: 70px;
+  margin-left: 130px;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.kg_map_info span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.country {
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.main_map {
+  width: 110vh !important;
+  margin-left: 150px;
+}
+
+.rus_map_info {
+  display: flex;
+  margin-top: -100px;
+  margin-bottom: 70px;
+}
+
+.rus_map_info span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.russian_map {
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+}
+
+.info_contacts {
+  width: 517px;
+  /* height: 850px; */
+  border-radius: 10px;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.07);
+  color: #008045;
+  position: absolute;
+  z-index: 99;
+  background-color: #ffff;
+  margin-left: 800px;
+  margin-top: -600px;
+  padding: 35px 25px;
+  border-radius: 10px;
+}
+
+.info_kg {
+  display: flex;
+  justify-content: space-around;
+  font-size: 12px;
+  margin-top: 20px !important;
+  /* margin: 0 auto; */
+}
+
+.street_info {
+  width: 340px;
+  height: 65px;
+  background-color: #008045;
+  color: #fff;
+  /* text-align: center; */
+  /* align-items: center; */
+  /* text-align: center; */
+  padding: 15px 25px;
+}
+
+.phone_info {
+  width: 114px;
+  height: 65px;
+  background-color: #008045;
+  color: #fff;
+  text-align: center !important;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5px;
+}
+.phone_info div {
+  margin-top: 5px;
+}
+
+.map_style {
+  display: flex;
+  position: relative;
+}
+
+.close_btn {
+  margin-top: 30px;
+  width: 100px;
+  background-color: #008045;
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 1600px) {
+  .main_map {
+    width: 80vh !important;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .info_contacts {
+    margin-left: 400px;
+    margin-top: -400px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main_map {
+    width: 50vh !important;
+    margin-left: auto;
+  }
+  .rus_map_info {
+    margin-top: 50px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .info_contacts {
+    margin-left: 200px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main_map {
+    width: 50vh !important;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .main_map {
+    width: 30vh !important;
+  }
+  .calc_title_line {
+    width: 100%;
+    margin-top: 90px;
+  }
+  .info_contacts {
+    margin-left: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .kg_map {
+    width: 400px;
+  }
+}

@@ -1,0 +1,91 @@
+.kg_map {
+  width: 1000px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  background-color: red !important;
+}
+
+.kg_map .svg_map__location__heat0 {
+  fill: #cccccc;
+}
+
+.kg_map .svg_map__location__heat1 {
+  fill: #e6e6e6;
+}
+.kg_map .svg_map__location__heat2 {
+  fill: #b3b3b3;
+}
+
+.kg_map .svg_map__location__heat3 {
+  fill: #e6e6e6;
+}
+.kg_map .svg_map__location__heat4 {
+  fill: #e6e6e6;
+}
+.kg_map .svg_map__location__heat5 {
+  fill: #b3b3b3;
+}
+.kg_map .svg_map__location__heat6 {
+  fill: #cccccc;
+}
+
+.kg_map .svg_map__location__heat7,
+.svg_map__location__heat8,
+.svg_map__location__heat9,
+.svg_map__location__heat10,
+.svg_map__location__heat11,
+.svg_map__location__heat12,
+.svg_map__location__heat13 {
+  fill: green;
+  outline: none;
+}
+.svg_map__location__heat14 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat0:focus ~ .svg_map__location__heat11 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat1:focus ~ .svg_map__location__heat12 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat2:focus ~ .svg_map__location__heat10 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat3:focus ~ .svg_map__location__heat13 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat4:focus ~ .svg_map__location__heat9 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat5:focus ~ .svg_map__location__heat8 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat6:focus ~ .svg_map__location__heat7 {
+  fill: white;
+  outline: none;
+}
+
+.kg_map .svg_map__location__heat0:focus,
+.svg_map__location__heat1:focus,
+.svg_map__location__heat2:focus,
+.svg_map__location__heat3:focus,
+.svg_map__location__heat4:focus,
+.svg_map__location__heat5:focus,
+.svg_map__location__heat6:focus {
+  fill: #008045;
+  outline: none;
+}

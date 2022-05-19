@@ -1,0 +1,146 @@
+.main_team {
+  padding: 0 50px;
+}
+
+.calc_title_name {
+  font-weight: 700 bold;
+  font-size: 48px;
+  height: 58px;
+  margin-bottom: 0;
+}
+
+.calc_title_line {
+  width: 510px;
+  margin-left: 0;
+  height: 9px;
+  background-color: #00512e;
+}
+
+.news {
+  width: 380px;
+  height: 550px;
+  padding: 0;
+  margin-right: 0;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  border-radius: 10px;
+}
+
+.title_name {
+  font-size: 24px !important;
+  color: #00512e;
+  margin-bottom: 5px;
+  font-weight: 700 bold;
+}
+
+.titleP_main {
+  padding-left: 30px;
+  font-size: 14px;
+  font-weight: 400 bold;
+}
+
+.teammates {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.first_team {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 90px;
+}
+
+.ihs_first {
+  font-size: 36px;
+  color: #00512e;
+  padding-top: 110px;
+}
+
+.second_team {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 90px;
+}
+
+.pclass {
+  color: #ffd600;
+  font-size: 24px;
+  text-align: right;
+}
+.titleP_main {
+  text-align: center;
+}
+.ermat {
+  padding-top: 110px;
+}
+
+@media only screen and (max-width: 992px) {
+  .first_team {
+    flex-wrap: wrap;
+  }
+  .ihs_first {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .second_team {
+    display: block;
+  }
+  .calc_title_name {
+    margin-left: 0;
+    padding-bottom: 150px;
+  }
+  .calc_title_line {
+    width: 100%;
+  }
+  .pclass {
+    text-align: center;
+  }
+  .second_team {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .second_team span {
+    display: flex;
+    justify-content: center;
+  }
+  .ermat {
+    display: flex;
+    justify-content: center;
+  }
+  /* .second_team {
+    display: flex;
+    justify-content: space-evenly;
+  } */
+}
+
+@media only screen and (max-width: 992px) {
+  .main_team {
+    padding: 0 15px;
+  }
+  .first_team {
+    justify-content: start;
+  }
+  .pclass {
+    text-align: left;
+  }
+  .second_team span {
+    display: block;
+  }
+  .ihs_first {
+    display: block;
+  }
+  .ermat {
+    display: block;
+  }
+  .ihs_first:last-child {
+    padding-top: 0;
+  }
+  .calc_title_name {
+    padding-bottom: 0;
+  }
+  .news {
+    padding-top: 50px;
+  }
+}

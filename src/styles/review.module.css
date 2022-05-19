@@ -1,0 +1,113 @@
+.back_img {
+  background-image: url("/img/Rectangle.png");
+  background-repeat: no-repeat;
+  height: 750px;
+  background-size: contain;
+  background-color: #00512e;
+  background-position: right;
+  margin-top: 150px;
+  display: flex;
+  min-width: 100vw;
+  margin-left: calc(50% - 49.5vw);
+  margin-right: calc(50% - 49.4vw);
+}
+
+.but_review {
+  background-color: #ffd600;
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  margin-top: 20px;
+  border: 0;
+}
+
+.review_vid {
+  width: 620px;
+  height: 650px;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 50px;
+  margin-left: 160px;
+}
+
+.video {
+  width: 200px;
+  height: 300px;
+}
+
+.happy_review {
+  padding-left: 130px;
+}
+
+.player_review {
+  height: 300px !important;
+  width: 580px !important;
+  margin-top: 180px;
+  position: absolute;
+  margin-left: 20px;
+}
+
+.account_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.account_picture {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 1200px) {
+  .back_img {
+    width: 100%;
+  }
+  .review_vid {
+    margin-left: 0;
+  }
+  .but_review {
+    margin-left: 0px;
+  }
+  .happy_review {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .back_img {
+    height: 850px;
+    background-image: none;
+    display: flex;
+    justify-self: center;
+  }
+  .review_vid {
+    margin-top: 130px;
+  }
+  .happy_review h1 {
+    padding-top: 20px !important;
+    text-align: center;
+  }
+  .happy_review h1 br {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .back_img {
+    height: 900px;
+    display: block;
+  }
+  .review_vid {
+    margin-top: 80px !important;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    height: 450px;
+  }
+  .happy_review {
+    text-align: center;
+  }
+  .happy_clients {
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,117 @@
+.kg-map {
+  width: 500px;
+}
+
+.kg-map .svg-map__location--heat0 {
+  fill: #cccccc;
+}
+
+.kg-map .svg-map__location--heat1 {
+  fill: #e6e6e6;
+}
+.kg-map .svg-map__location--heat2 {
+  fill: #b3b3b3;
+}
+
+.kg-map .svg-map__location--heat3 {
+  fill: #e6e6e6;
+}
+.kg-map .svg-map__location--heat4 {
+  fill: #e6e6e6;
+}
+.kg-map .svg-map__location--heat5 {
+  fill: #b3b3b3;
+}
+.kg-map .svg-map__location--heat6 {
+  fill: #cccccc;
+}
+
+.kg-map .svg-map__location--heat7,
+.svg-map__location--heat8,
+.svg-map__location--heat9,
+.svg-map__location--heat10,
+.svg-map__location--heat11,
+.svg-map__location--heat12,
+.svg-map__location--heat13 {
+  fill: green;
+  outline: none;
+}
+.svg-map__location--heat14 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat0:focus ~ .svg-map__location--heat11 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat1:focus ~ .svg-map__location--heat12 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat2:focus ~ .svg-map__location--heat10 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat3:focus ~ .svg-map__location--heat13 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat4:focus ~ .svg-map__location--heat9 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat5:focus ~ .svg-map__location--heat8 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat6:focus ~ .svg-map__location--heat7 {
+  fill: white;
+  outline: none;
+}
+
+.kg-map .svg-map__location--heat0:focus,
+.svg-map__location--heat1:focus,
+.svg-map__location--heat2:focus,
+.svg-map__location--heat3:focus,
+.svg-map__location--heat4:focus,
+.svg-map__location--heat5:focus,
+.svg-map__location--heat6:focus {
+  fill: #008045;
+  outline: none;
+}
+
+.burger_menu_icon {
+  padding-top: 20px;
+}
+
+.burger {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_burger {
+  height: 90px !important;
+}
+
+.icon_logo {
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.button_construct {
+  background-color: #ffd600;
+  color: #fff !important;
+  font-size: 16px;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 30px;
+}
