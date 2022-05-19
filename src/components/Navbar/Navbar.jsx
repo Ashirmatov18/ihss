@@ -17,6 +17,7 @@ import Link from "next/link";
 import { useTheme } from "@mui/material";
 import DrawerComponent from "./DrawerComponent.jsx";
 import { Insta, Twitter } from "./NavbarIcons";
+import MainLayout from "../ui/MainLayout";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -66,156 +67,163 @@ export default function Navbar() {
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-    <nav className={styles.burger_menu}>
-      <div className={styles.first_nav}>
-        <ul className={styles.first_nav_logo}>
-          <li>
-            +996 700 00 51 51 <Image src={vector} />
-          </li>
-          <div>
-            <li className={styles.social_network}>
-              <div className={styles.logo_social}>
-                <Insta />
-              </div>
-              <div className={styles.logo_social}>
-                <Twitter />
-              </div>
-
-              <div className={styles.logo_social}>
-                <Image src={youtube} alt="youtube" />
-              </div>
+    <MainLayout>
+      <nav className={styles.burger_menu}>
+        <div className={styles.first_nav}>
+          <ul className={styles.first_nav_logo}>
+            <li>
+              +996 700 00 51 51 <Image src={vector} />
             </li>
-          </div>
+            <div>
+              <li className={styles.social_network}>
+                <div className={styles.logo_social}>
+                  <Insta />
+                </div>
+                <div className={styles.logo_social}>
+                  <Twitter />
+                </div>
 
-          <li style={{ marginRight: "70px" }}>
-            г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж.{" "}
-            <Image src={vector} />
-          </li>
-        </ul>
-      </div>
+                <div className={styles.logo_social}>
+                  <Image src={youtube} alt="youtube" />
+                </div>
+              </li>
+            </div>
 
-      {isMatch ? (
-        <DrawerComponent />
-      ) : (
-        <>
-          <div className={styles.second_nav}>
-            <Box sx={{ flexGrow: 1 }}>
-              <AppBar
-                elevation={0}
-                style={{ backgroundColor: "white", color: "black" }}
-                position="static"
-              >
-                <Toolbar className={styles.toolbar}>
-                  <div>
-                    <Link href="/">
-                      <Typography variant="h6" color="inherit" component="div">
-                        <img src="/img/main_logo.png" alt="" />
-                      </Typography>
-                    </Link>
-                  </div>
+            <li style={{ marginRight: "70px" }}>
+              г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж.{" "}
+              <Image src={vector} />
+            </li>
+          </ul>
+        </div>
 
-                  <div className={styles.navbar_info}>
-                    <Link href="/team">
-                      <Typography
-                        className={styles.about}
-                        variant="h6"
-                        color="inherit"
-                        component="div"
-                      >
-                        <span className={styles.popup_window}>lorem</span>О нас
-                      </Typography>
-                    </Link>
-
-                    <Link href="/programs">
-                      <Typography
-                        className={styles.about}
-                        variant="h6"
-                        color="inherit"
-                        component="div"
-                      >
-                        <span className={styles.popup_window}>lorem</span>
-                        Программы
-                      </Typography>
-                    </Link>
-                    <Link href="/news">
-                      <Typography
-                        className={styles.about}
-                        variant="h6"
-                        color="inherit"
-                        component="div"
-                      >
-                        <span className={styles.popup_window}>lorem</span>
-                        Новости
-                      </Typography>
-                    </Link>
-                    <Link href="/review">
-                      <Typography
-                        className={styles.about}
-                        variant="h6"
-                        color="inherit"
-                        component="div"
-                      >
-                        <span className={styles.popup_window}>lorem</span>
-                        Отзывы
-                      </Typography>
-                    </Link>
-
-                    <Link href="/contacts">
-                      <Typography
-                        className={styles.about}
-                        variant="h6"
-                        color="inherit"
-                        component="div"
-                      >
-                        <span className={styles.popup_window}>lorem</span>
-                        Контакты
-                      </Typography>
-                    </Link>
-                  </div>
-                  <div>
-                    <Button
-                      className={styles.button_construction}
-                      variant="h6"
-                      // color="inherit"
-                      component="div"
-                      style={{ pointerEvents: "none" }}
-                    >
-                      ihsan construction
-                    </Button>
-                  </div>
-
-                  <div className={styles.search_icon}>
-                    <div className={styles.lang}>
-                      {" "}
-                      <FormControl fullWidth>
-                        <NativeSelect
-                          defaultValue={30}
-                          inputProps={{
-                            name: "age",
-                            id: "uncontrolled-native",
-                          }}
+        {isMatch ? (
+          <DrawerComponent />
+        ) : (
+          <>
+            <div className={styles.second_nav}>
+              <Box sx={{ flexGrow: 1 }}>
+                <AppBar
+                  elevation={0}
+                  style={{ backgroundColor: "white", color: "black" }}
+                  position="static"
+                >
+                  <Toolbar className={styles.toolbar}>
+                    <div>
+                      <Link href="/">
+                        <Typography
+                          variant="h6"
+                          color="inherit"
+                          component="div"
                         >
-                          <option value={10}>РУС</option>
-                          <option value={20}>КЫР</option>
-                        </NativeSelect>
-                      </FormControl>
+                          <img src="/img/main_logo.png" alt="" />
+                        </Typography>
+                      </Link>
                     </div>
 
-                    <Search className={styles.search_main}>
-                      <SearchIconWrapper>
-                        <SearchIcon />
-                      </SearchIconWrapper>
-                      <StyledInputBase
-                        inputProps={{ "aria-label": "search" }}
-                      />
-                    </Search>
-                  </div>
-                </Toolbar>
-              </AppBar>
-            </Box>
-          </div>
-        </>
-      )}
-    </nav>
+                    <div className={styles.navbar_info}>
+                      <Link href="/team">
+                        <Typography
+                          className={styles.about}
+                          variant="h6"
+                          color="inherit"
+                          component="div"
+                        >
+                          <span className={styles.popup_window}>lorem</span>О
+                          нас
+                        </Typography>
+                      </Link>
+
+                      <Link href="/programs">
+                        <Typography
+                          className={styles.about}
+                          variant="h6"
+                          color="inherit"
+                          component="div"
+                        >
+                          <span className={styles.popup_window}>lorem</span>
+                          Программы
+                        </Typography>
+                      </Link>
+                      <Link href="/news">
+                        <Typography
+                          className={styles.about}
+                          variant="h6"
+                          color="inherit"
+                          component="div"
+                        >
+                          <span className={styles.popup_window}>lorem</span>
+                          Новости
+                        </Typography>
+                      </Link>
+                      <Link href="/review">
+                        <Typography
+                          className={styles.about}
+                          variant="h6"
+                          color="inherit"
+                          component="div"
+                        >
+                          <span className={styles.popup_window}>lorem</span>
+                          Отзывы
+                        </Typography>
+                      </Link>
+
+                      <Link href="/contacts">
+                        <Typography
+                          className={styles.about}
+                          variant="h6"
+                          color="inherit"
+                          component="div"
+                        >
+                          <span className={styles.popup_window}>lorem</span>
+                          Контакты
+                        </Typography>
+                      </Link>
+                    </div>
+                    <div>
+                      <Button
+                        className={styles.button_construction}
+                        variant="h6"
+                        // color="inherit"
+                        component="div"
+                        style={{ pointerEvents: "none" }}
+                      >
+                        ihsan construction
+                      </Button>
+                    </div>
+
+                    <div className={styles.search_icon}>
+                      <div className={styles.lang}>
+                        {" "}
+                        <FormControl fullWidth>
+                          <NativeSelect
+                            defaultValue={30}
+                            inputProps={{
+                              name: "age",
+                              id: "uncontrolled-native",
+                            }}
+                          >
+                            <option value={10}>РУС</option>
+                            <option value={20}>КЫР</option>
+                          </NativeSelect>
+                        </FormControl>
+                      </div>
+
+                      <Search className={styles.search_main}>
+                        <SearchIconWrapper>
+                          <SearchIcon />
+                        </SearchIconWrapper>
+                        <StyledInputBase
+                          inputProps={{ "aria-label": "search" }}
+                        />
+                      </Search>
+                    </div>
+                  </Toolbar>
+                </AppBar>
+              </Box>
+            </div>
+          </>
+        )}
+      </nav>
+    </MainLayout>
   );
 }

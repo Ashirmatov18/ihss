@@ -7,7 +7,7 @@
   background-position: right;
   margin-top: 150px;
   display: flex;
-  min-width: 100vw;
+  min-width: 98.9vw;
   margin-left: calc(50% - 49.5vw);
   margin-right: calc(50% - 49.4vw);
 }
