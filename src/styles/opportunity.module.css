@@ -16,6 +16,7 @@
 
 .strong_name {
   font-size: 30px;
+  z-index: 99;
 }
 
 .info_stats {
@@ -27,6 +28,7 @@
 
 .stat {
   margin-right: 100px;
+  position: relative;
 }
 
 .bottom_info {
@@ -93,6 +95,18 @@
   text-align: center;
   padding-top: 15px;
   border-radius: 25px 0 0;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: #ffd600;
+  position: absolute;
+  padding-bottom: 15px;
+  margin-top: -90px;
+  z-index: 2;
+  opacity: 0.3;
 }
 
 .helpers {

@@ -66,8 +66,8 @@ export default function Navbar() {
   const [style, setStyle] = useState({ backgroundColor: "white" });
 
   return (
-    <MainLayout>
-      <nav className={styles.burger_menu} style={style}>
+    <nav className={styles.burger_menu} style={style}>
+      <div>
         <div className={styles.first_nav}>
           <ul className={styles.first_nav_logo}>
             <li>
@@ -99,7 +99,7 @@ export default function Navbar() {
           <DrawerComponent />
         ) : (
           <>
-            <div className={styles.second_nav}>
+            <div style={style} className={styles.second_nav}>
               <Box sx={{ flexGrow: 1 }}>
                 <AppBar
                   elevation={0}
@@ -223,7 +223,7 @@ export default function Navbar() {
             </div>
           </>
         )}
-      </nav>
-    </MainLayout>
+      </div>
+    </nav>
   );
 }
