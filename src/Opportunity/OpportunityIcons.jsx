@@ -36,3 +36,16 @@ export const M = (props) => (
     />
   </svg>
 );
+
+export const Arrow = (props) => (
+  <svg
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path d="M16 11L11 5L12 4L20 12L12 20L11 19L16 13H4V11H16Z" fill="black" />
+  </svg>
+);

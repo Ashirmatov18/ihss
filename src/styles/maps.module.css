@@ -5,7 +5,6 @@
 .calc_title_name {
   font-weight: 700 bold;
   font-size: 48px;
-  /* line-height: 4px; */
   height: 58px;
   margin-bottom: 0;
 }
@@ -14,7 +13,6 @@
   width: 50vw;
   margin-left: calc(50% - 50vw);
   height: 9px;
-  /* border: none; */
   background-color: #00512e !important;
 }
 
@@ -143,11 +141,34 @@
     margin-top: 50px;
     text-align: center;
   }
+  .russian_map {
+    width: 300px;
+  }
+  .map_style {
+    display: flex !important;
+    justify-content: center !important;
+  }
 }
 
 @media only screen and (max-width: 950px) {
   .info_contacts {
     margin-left: 200px;
+    width: 400px;
+  }
+  .street_info {
+    height: 95px;
+    width: 200px;
+  }
+  .phone_info {
+    height: 95px;
+  }
+  .kg_map_info {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+  .rus_map_info {
+    justify-content: center;
   }
 }
 

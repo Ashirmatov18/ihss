@@ -59,11 +59,18 @@ export default function Calculator() {
       <div className={styles.calc_info}>
         <div className={styles.first_section}>
           <div className={styles.filter_name}>
-            <button className={styles.but_filter}>
-              Недвижимость <Home />
-            </button>
             <button className={styles.but_filter_second}>
-              Автомобиль <Auto />
+              <div className={styles.button_location}>
+                <div style={{ paddingTop: "3px" }}>Недвижимости</div>{" "}
+                <Home style={{ marginBottom: "3px" }} />
+              </div>
+            </button>
+
+            <button className={styles.but_filter_second}>
+              <div className={styles.button_location}>
+                <div style={{ paddingTop: "3px" }}>Автомобиль</div>{" "}
+                <Auto style={{ marginBottom: "3px" }} />
+              </div>
             </button>
           </div>
           <div style={{ marginTop: "50px" }}>
@@ -77,7 +84,7 @@ export default function Calculator() {
               <Slider
                 sx={{
                   width: 300,
-                  color: "success.main",
+                  color: "#FFD600",
                 }}
                 min={1000}
                 max={10000}
@@ -189,40 +196,55 @@ export default function Calculator() {
 
             <div className={styles.main_cur}>
               <div className={styles.currency}>
-                <div>
-                  <span>
-                    {" "}
-                    <Usd />
-                    <strong style={{ marginLeft: "10px", fontSize: "20px" }}>
+                <div style={{ display: "flex" }}>
+                  <Usd />
+                  <div>
+                    <span
+                      style={{
+                        marginLeft: "10px",
+                        fontSize: "20px",
+                        fontFamily: "Inter sans-serif",
+                      }}
+                    >
                       USD
-                    </strong>
-                  </span>
+                    </span>
+                  </div>
                 </div>
                 <span> 84.90 СОМ</span>
               </div>
 
               <div className={styles.currency}>
-                <div>
-                  <span>
-                    {" "}
-                    <Eur />
-                    <strong style={{ marginLeft: "10px", fontSize: "20px" }}>
+                <div style={{ display: "flex" }}>
+                  <Eur />
+                  <div>
+                    <span
+                      style={{
+                        marginLeft: "10px",
+                        fontSize: "20px",
+                        fontFamily: "Inter sans-serif",
+                      }}
+                    >
                       EUR
-                    </strong>
-                  </span>
+                    </span>
+                  </div>
                 </div>
                 <span> 100.27 СОМ</span>
               </div>
 
               <div className={styles.currency}>
-                <div>
-                  <span>
-                    {" "}
-                    <Rub />
-                    <strong style={{ marginLeft: "10px", fontSize: "20px" }}>
-                      РУБ
-                    </strong>
-                  </span>
+                <div style={{ display: "flex" }}>
+                  <Rub />
+                  <div>
+                    <span
+                      style={{
+                        marginLeft: "10px",
+                        fontSize: "20px",
+                        fontFamily: "Inter sans-serif",
+                      }}
+                    >
+                      RUB
+                    </span>
+                  </div>
                 </div>
                 <span> 1.14 СОМ</span>
               </div>

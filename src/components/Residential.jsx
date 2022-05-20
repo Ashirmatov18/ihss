@@ -7,6 +7,7 @@ import third from "../../public/img/third.png";
 import fourth from "../../public/img/fourth.png";
 import fifth from "../../public/img/fifth.png";
 import halal from "../../public/img/halal.png";
+import { Arrow } from "../Opportunity/OpportunityIcons";
 
 export default function Residential() {
   return (
@@ -60,7 +61,7 @@ export default function Residential() {
                   viverra eu
                 </p>
                 <a href="" className={styles.card__button}>
-                  Подробнее
+                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
                 </a>
               </figcaption>
             </figure>
@@ -81,7 +82,7 @@ export default function Residential() {
                   for you.
                 </p>
                 <a href="" className={styles.card__button}>
-                  Подробнее
+                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
                 </a>
               </figcaption>
             </figure>
@@ -104,7 +105,7 @@ export default function Residential() {
                   any office choosing to participate.
                 </p>
                 <a href="" className={styles.card__button}>
-                  Подробнее
+                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
                 </a>
               </figcaption>
             </figure>
@@ -125,7 +126,7 @@ export default function Residential() {
                   for you.
                 </p>
                 <a href="" className={styles.card__button}>
-                  Подробнее
+                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
                 </a>
               </figcaption>
             </figure>
@@ -146,7 +147,7 @@ export default function Residential() {
                   for you.
                 </p>
                 <a href="" className={styles.card__button}>
-                  Подробнее
+                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
                 </a>
               </figcaption>
             </figure>

@@ -1,3 +1,7 @@
+* {
+  border: none;
+}
+
 .kg-map {
   width: 500px;
 }
@@ -114,4 +118,18 @@
   border-radius: 10px;
   margin-left: 10px;
   margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+  .map {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map_style {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }

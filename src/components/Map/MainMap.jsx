@@ -242,7 +242,6 @@ function MainMap() {
       {rusModal && (
         <div className={styles.info_contacts}>
           <h1 style={{ textAlign: "center" }}>{rusData[0].title}</h1>
-          {/* <h1 style={{ textAlign: "center" }}>{selectRegion.id}</h1> */}
           <div>
             {rusData.map((item) => (
               <div className={styles.info_kg}>
@@ -253,8 +252,6 @@ function MainMap() {
           </div>
         </div>
       )}
-
-      {/* <Footer /> */}
     </>
   );
 }

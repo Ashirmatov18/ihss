@@ -104,7 +104,7 @@
   background-color: #ffd600;
   position: absolute;
   padding-bottom: 15px;
-  margin-top: -90px;
+  margin-top: -95px;
   z-index: 2;
   opacity: 0.3;
 }
@@ -141,6 +141,10 @@
   padding-left: 20px;
 }
 
+.halal {
+  margin-top: 100px;
+}
+
 @media only screen and (max-width: 1200px) {
   .main_info {
     width: 100%;
@@ -161,22 +165,38 @@
     margin-left: 40px;
     /* margin-top: 200px; */
   }
+  .info_stats {
+    justify-content: center;
+  }
+  .stat {
+    margin-right: 60px;
+  }
 }
 
 @media only screen and (max-width: 810px) {
-  .stat {
-    margin-right: 50px;
-  }
   .modal_winow {
     display: none;
   }
   .contact {
     display: none;
   }
+  .stat:last-child {
+    margin-right: 0;
+  }
+  .halal {
+    text-align: center;
+  }
+  .main_char {
+    text-align: center;
+  }
+  .button_follow {
+    display: flex;
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 680px) {
   .main_info {
-    height: 900px;
+    height: 600px;
     margin-bottom: 70px;
   }
   .info_stats {
@@ -186,16 +206,12 @@
     font-size: 25px;
   }
   .stat {
-    margin-right: 30px;
+    margin-right: 20px;
   }
   .strong_name {
     font-size: 25px;
     justify-content: space-between;
     padding-top: 30px;
-  }
-  .button_follow {
-    display: flex;
-    justify-content: center;
   }
 }
 
@@ -203,7 +219,6 @@
   .opportunity_text {
     margin-left: 10px;
   }
-
   .halal {
     margin-top: 10px;
   }
@@ -215,14 +230,19 @@
     margin-top: 45px;
   }
   .stat {
-    /* margin-right: 20px; */
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .info_stats {
-    margin-left: -45px;
+    display: flex;
+    justify-content: center;
   }
   .strong_name {
     font-size: 15px;
+  }
+  .circle {
+    width: 17px;
+    height: 17px;
+    margin-top: -65px;
   }
 }

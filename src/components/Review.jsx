@@ -3,6 +3,9 @@ import styles from "../styles/review.module.css";
 import Image from "next/image";
 import quotes from "../../public/img/quotes.png";
 import acc from "../assets/img/Picture.png";
+import ReactPlayer from "react-player/lazy";
+import play from "../../public/img/playvid.png";
+import { Left, Right } from "../Review/ReviewIcons";
 
 export default function Review() {
   return (
@@ -62,11 +65,25 @@ export default function Review() {
             </div>
           </div>
           <div>
-            {/* <ReactPlayer
-              className={styles.player_review}
-              url="//player.vimeo.com/video/407250987?title=0&portrait=0&byline=0&autoplay=1&muted=true"
-              controls={true}
-            /> */}
+            <div className={styles.video_player}>
+              <ReactPlayer
+                className
+                style={{ backgroundColor: "white", borderRadius: "10px" }}
+                width="80%"
+                height="290px"
+                light="../../public/img/video.png"
+                playIcon={<Image src={play} />}
+                url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+              />
+            </div>
+            <div className={styles.slider}>
+              <div>
+                <Left />
+              </div>
+              <div>
+                <Right />
+              </div>
+            </div>
           </div>
         </div>
       </div>

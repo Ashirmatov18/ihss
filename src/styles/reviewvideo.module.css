@@ -1,50 +1,38 @@
 .calc_title_name {
   font-weight: 700 bold;
+  padding: 0 100px;
   font-size: 48px;
-  margin-left: 130px;
-  /* line-height: 4px; */
   height: 58px;
   margin-bottom: 0;
 }
 
 .calc_title_line {
-  width: 510px;
-  margin-left: 0;
+  width: 30vw;
+  margin-left: calc(50% - 50vw);
   height: 9px;
-  /* border: none; */
   background-color: #00512e;
 }
-
+.review_mod {
+  background-color: #e5e5e5;
+  padding: 0 50px;
+  margin: 0 auto;
+}
 .first_modals {
   height: 300px;
   width: 500px;
-  /* background-color: #fcfcfc; */
-  /* background-color: grey; */
-  background-image: url("../assets/img/example.jpg");
+  background-color: #fcfcfc;
   background-repeat: no-repeat;
   background-position: cover;
-  margin-left: 50px;
+  margin-bottom: 50px;
 }
 
 .firstt {
   width: 50px;
   height: 50px;
   display: flex;
-  justify-content: center;
-  /* background-color: #fff; */
+  /* justify-content: center; */
   margin: 0 auto;
-  /* padding-top: 50px; */
 }
-
-/* .buttt {
-  /* align-self: center; */
-/* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border: 5px solid #ffff00;
-  padding: 10px; */
-/* } */
 
 .main_block {
   display: flex;
@@ -68,19 +56,6 @@
   background: rgba(49, 49, 49, 0.8);
 }
 
-/* .modal_content {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  line-height: 1.4;
-  background: #f1f1f1;
-  padding: 14px 28px;
-  border-radius: 3px;
-  max-width: 640px;
-  min-width: 360px;
-} */
-
 .close-modal {
   position: absolute;
   top: 10px;
@@ -95,8 +70,33 @@
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: #f1f1f1;
-  /* padding: 14px 28px; */
-  /* border-radius: 3px;
-  max-width: 640px;
-  min-width: 360px; */
+}
+@media (max-width: 1200px) {
+  .calc_title_name {
+    padding: 0;
+  }
+}
+
+@media (max-width: 810px) {
+  .calc_title_line {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 610px) {
+  .first_modals {
+    width: 130%;
+  }
+  .main_block {
+    justify-content: space-between;
+  }
+  .main_contain {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .first_modals {
+    width: 100%;
+  }
 }

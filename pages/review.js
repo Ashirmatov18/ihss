@@ -3,6 +3,7 @@ import Navbar from "../src/components/Navbar/Navbar";
 import Head from "next/head";
 import Footer from "../src/components/Footer";
 import ReviewsVid from "../src/components/Reviews/ReviewsVid";
+import MainLayout from "../src/components/ui/MainLayout";
 
 export default function programs() {
   return (
@@ -10,8 +11,11 @@ export default function programs() {
       <Head>
         <title>Программы</title>
       </Head>
+
       <main>
-        <Navbar />
+        <MainLayout>
+          <Navbar />
+        </MainLayout>
         <ReviewsVid />
         <Footer />
       </main>

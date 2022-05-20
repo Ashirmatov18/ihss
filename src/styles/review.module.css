@@ -12,6 +12,25 @@
   margin-right: calc(50% - 49.4vw);
 }
 
+.video_player {
+  margin-top: 100px !important;
+  display: flex;
+  justify-content: center;
+}
+
+.slider {
+  border-radius: 10px;
+  background-color: #fff;
+  width: 170px;
+  height: 60px;
+  margin-top: 70px;
+  float: right;
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px;
+}
+
 .but_review {
   background-color: #ffd600;
   border-radius: 10px;
@@ -76,13 +95,16 @@
 
 @media only screen and (max-width: 992px) {
   .back_img {
-    height: 850px;
+    height: 1000px;
     background-image: none;
     display: flex;
     justify-self: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .review_vid {
-    margin-top: 130px;
+
+  .happy_review {
+    text-align: center;
   }
   .happy_review h1 {
     padding-top: 20px !important;
@@ -102,12 +124,16 @@
     width: 90%;
     margin: 0 auto;
     border-radius: 10px;
-    height: 450px;
+    height: 600px;
   }
   .happy_review {
     text-align: center;
   }
   .happy_clients {
     padding-left: 0;
+  }
+
+  .video_player {
+    margin-top: 40px !important;
   }
 }

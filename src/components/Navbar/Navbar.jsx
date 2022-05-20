@@ -16,8 +16,7 @@ import NativeSelect from "@mui/material/NativeSelect";
 import Link from "next/link";
 import { useTheme } from "@mui/material";
 import DrawerComponent from "./DrawerComponent.jsx";
-import { Insta, Twitter } from "./NavbarIcons";
-import MainLayout from "../ui/MainLayout";
+import { Insta, Twitter, Vector } from "./NavbarIcons";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -71,7 +70,10 @@ export default function Navbar() {
         <div className={styles.first_nav}>
           <ul className={styles.first_nav_logo}>
             <li>
-              +996 700 00 51 51 <Image src={vector} />
+              <div className={styles.first_mobile}>
+                <span>+996 700 00 51 51</span>
+                <Vector style={{ marginTop: "5px" }} />
+              </div>
             </li>
             <div>
               <li className={styles.social_network}>

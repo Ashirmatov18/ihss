@@ -36,6 +36,11 @@
   margin-top: 52px;
 }
 
+.button_location {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 .but_filter_second {
   width: 280px;
   height: 50px;
@@ -49,10 +54,16 @@
   margin-left: 20px;
 }
 
+.but_filter_second:last-child {
+  background-color: #fff;
+  color: #989898;
+}
+
 .currency {
   display: flex;
   justify-content: space-between;
   margin-left: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .point {
@@ -146,7 +157,8 @@
 
 .currency_button {
   border-radius: 10px !important;
-  color: #00512e;
+  color: #989898;
+  border-color: #fff !important;
 }
 .currency_button:hover {
   background-color: #00512e !important;
@@ -161,11 +173,17 @@
   background-color: #00512e !important;
   color: #fff;
 }
+.filter_name {
+  display: flex;
+}
 
 .payment_button {
   background-color: #fff;
-  color: black;
-  margin-left: 30px;
+  color: #989898;
+  margin-left: 15px;
+  border-color: #fff !important;
+  width: 100px;
+  border-radius: 10px !important;
 }
 
 .payment_button:hover {
@@ -180,7 +198,7 @@
 
 .last_but:hover {
   background-color: #000;
-  color: #fff;
+  color: #ffd600;
 }
 /* .button_percent {
   margin-left: 30px;
@@ -260,5 +278,8 @@
   }
   .calc_title_line {
     width: 70%;
+  }
+  .but_filter_second:last-child {
+    margin-left: 5px;
   }
 }

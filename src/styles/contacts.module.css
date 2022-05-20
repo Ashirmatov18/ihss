@@ -1,19 +1,21 @@
 .calc_title_name {
   font-weight: 700 bold;
   font-size: 48px;
-  margin-left: 130px;
-  /* line-height: 4px; */
   height: 58px;
   margin-bottom: 0;
 }
 
 .calc_title_line {
-  width: 510px;
-  margin-left: 0;
+  width: 40vw;
+  margin-left: calc(50% - 50vw);
   height: 9px;
-  /* border: none; */
   background-color: #00512e;
   margin-bottom: 50px;
+}
+
+.main_address_title {
+  padding: 0 50px;
+  margin: 0 auto;
 }
 
 .main_address {
@@ -24,4 +26,39 @@
 
 .adress_map {
   margin-bottom: 150px;
+}
+
+.adrress {
+  display: flex;
+  margin-top: 10px;
+}
+
+.location {
+  padding-top: 15px;
+  margin-right: 25px;
+  color: #989898;
+}
+
+.mess {
+  margin-right: 25px;
+  color: #989898;
+}
+
+.mobile {
+  margin-right: 34px;
+}
+
+.title_address {
+  color: #00512e;
+  font-size: 24px;
+}
+
+.info_address {
+  color: #989898;
+}
+
+@media (max-width: 810px) {
+  .calc_title_line {
+    width: 70vw;
+  }
 }
