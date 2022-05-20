@@ -15,14 +15,14 @@ export default function Calculator() {
   const [paymentPercent, setPaymentPercent] = React.useState(50);
   const [costValue, setCostValue] = React.useState(10000);
   const initialFee = useMemo(
-    () => (costValue || 0) * ((paymentPercent || 0) / 100),
+    () => ((costValue || 0) * ((paymentPercent || 0) / 100)).toFixed(0),
     [costValue, paymentPercent]
   );
   const [calculationResult, setCalculationResult] = React.useState({
     cost: costValue,
     firstPayment: (paymentPercent * costValue) / 100,
     initialFee,
-    entrance: costValue * 0.07,
+    entrance: (costValue * 0.07 || 0).toFixed(0),
     companyFinancing: costValue - (paymentPercent * costValue) / 100,
     monthly: 0,
   });
@@ -174,28 +174,35 @@ export default function Calculator() {
           <div>
             <h2>Срок договора</h2>
             <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth>
-                <Select
-                  style={{
-                    backgroundColor: "#00512E",
-                    color: "white",
-                    borderRadius: "10px",
-                  }}
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={months}
-                  onChange={handleChange}
-                >
-                  <MenuItem style={{ display: "none" }} value={"none"}>
-                    Срок
-                  </MenuItem>
-                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((year) => (
-                    <MenuItem key={`finance-${year}`} value={year * 12}>
-                      {year} год
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
+              <Select
+                fullWidth
+                style={{
+                  backgroundColor: "#00512E",
+                  color: "white",
+                  borderRadius: "10px",
+                }}
+                value={months}
+                onChange={handleChange}
+              >
+                <MenuItem style={{ display: "none" }} value={"none"}>
+                  Срок
+                </MenuItem>
+                {/*{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((year) => (*/}
+                {/*  <MenuItem key={`finance-${year}`} value={year * 12}>*/}
+                {/*    {year} год*/}
+                {/*  </MenuItem>*/}
+                {/*))}*/}
+                <MenuItem value={12}>1 год</MenuItem>
+                <MenuItem value={24}>2 года</MenuItem>
+                <MenuItem value={36}>3 года</MenuItem>
+                <MenuItem value={48}>4 года</MenuItem>
+                <MenuItem value={60}>5 лет</MenuItem>
+                <MenuItem value={72}>6 лет</MenuItem>
+                <MenuItem value={84}>7 лет</MenuItem>
+                <MenuItem value={96}>8 лет</MenuItem>
+                <MenuItem value={108}>9 лет</MenuItem>
+                <MenuItem value={120}>10 лет</MenuItem>
+              </Select>
             </Box>
             <button className={styles.compute} onClick={handleCalculation}>
               Рассчитать

@@ -43,6 +43,12 @@
   margin-left: 40px;
   position: relative;
 }
+
+.logo_social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .about {
   font-size: 18px;
   font-weight: normal;
