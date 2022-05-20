@@ -2,8 +2,8 @@
   background-color: #00512e;
   margin-top: 50px;
   min-width: 98.9vw;
-  margin-left: calc(50% - 49.5vw);
-  margin-right: calc(50% - 49.4vw);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .container {
@@ -47,6 +47,7 @@
   font-size: 18px;
   text-decoration: none;
   font-size: 14px;
+  display: flex;
 }
 .title {
   font-size: 20px;

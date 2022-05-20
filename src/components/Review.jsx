@@ -72,6 +72,7 @@ export default function Review() {
                 width="80%"
                 height="290px"
                 light="../../public/img/video.png"
+                playing={true}
                 playIcon={<Image src={play} />}
                 url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
               />

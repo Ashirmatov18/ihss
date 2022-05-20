@@ -23,6 +23,8 @@
 
 .toolbar {
   display: flex;
+  padding-left: 0 !important;
+  justify-content: space-between;
 }
 
 .button_construction {

@@ -191,7 +191,7 @@ export default function Navbar() {
                       </Button>
                     </div>
 
-                    <div className={styles.search_icon}>
+                    {/* <div className={styles.search_icon}>
                       <div className={styles.lang}>
                         <FormControl fullWidth>
                           <NativeSelect
@@ -218,7 +218,7 @@ export default function Navbar() {
                           inputProps={{ "aria-label": "search" }}
                         />
                       </Search>
-                    </div>
+                    </div> */}
                   </Toolbar>
                 </AppBar>
               </Box>

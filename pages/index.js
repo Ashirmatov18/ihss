@@ -16,6 +16,10 @@ export default function Home() {
     <>
       <Head>
         <title>Ishan</title>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <main>
         <MainLayout>

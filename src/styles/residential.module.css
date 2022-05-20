@@ -3,9 +3,9 @@
   background-image: url("../assets/img/catal.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 98.9vw;
-  margin-left: calc(50% - 49.5vw);
-  margin-right: calc(50% - 49.4vw);
+  min-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .take_res {

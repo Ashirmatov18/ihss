@@ -75,14 +75,14 @@ export default function DrawerComponent() {
 
       <div className={styles.third_adaptive}>
         <div className={styles.logo_ihs}></div>
-        <div>
+        {/* <div>
           <Search className={styles.search_adaptive}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
             <StyledInputBase inputProps={{ "aria-label": "search" }} />
           </Search>
-        </div>
+        </div> */}
       </div>
     </div>
   );

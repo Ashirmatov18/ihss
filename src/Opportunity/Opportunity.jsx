@@ -49,7 +49,7 @@ export default function Opportunity() {
           </div>
         </div>
         <div ref={domnode} className={styles.contact}>
-          <div className={styles.contact_us} onClick={() => setModal(true)}>
+          <div className={styles.contact_us}>
             <div>
               <W />
             </div>

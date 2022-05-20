@@ -88,8 +88,14 @@ export default function Footer() {
             <div className={styles.column}>
               <div className={styles.title}>Контакты</div>
               <div className={styles.link} href="#">
-                <Message />
-                <span style={{ marginLeft: "10px" }}>ihsangroup@gmail.io</span>
+                <div>
+                  <Message />
+                </div>
+                <div>
+                  <span style={{ marginLeft: "10px" }}>
+                    ihsangroup@gmail.io
+                  </span>
+                </div>
               </div>
               <div className={styles.link} href="#">
                 <Phone />

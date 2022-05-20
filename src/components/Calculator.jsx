@@ -198,12 +198,15 @@ export default function Calculator() {
               <div className={styles.currency}>
                 <div style={{ display: "flex" }}>
                   <Usd />
-                  <div>
+                  <div
+                    className={styles.value}
+                    style={{
+                      fontSize: "20px",
+                    }}
+                  >
                     <span
                       style={{
                         marginLeft: "10px",
-                        fontSize: "20px",
-                        fontFamily: "Inter sans-serif",
                       }}
                     >
                       USD
@@ -216,7 +219,7 @@ export default function Calculator() {
               <div className={styles.currency}>
                 <div style={{ display: "flex" }}>
                   <Eur />
-                  <div>
+                  <div style={{ fontFamily: "'Inter', sans-serif" }}>
                     <span
                       style={{
                         marginLeft: "10px",

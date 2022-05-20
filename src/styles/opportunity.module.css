@@ -4,9 +4,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Inter", sans-serif;
-  min-width: 98.9vw;
-  margin-left: calc(50% - 49.5vw);
-  margin-right: calc(50% - 49.4vw);
+  min-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   position: relative;
 }
 
