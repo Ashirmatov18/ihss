@@ -180,7 +180,7 @@
 
 @media only screen and (max-width: 690px) {
   .main_map {
-    width: 30vh !important;
+    width: 50vh !important;
   }
   .calc_title_line {
     width: 100%;
@@ -194,5 +194,16 @@
 @media only screen and (max-width: 500px) {
   .kg_map {
     width: 400px;
+  }
+  .info_contacts {
+    width: 300px;
+  }
+  .street_info {
+    height: 110px;
+    width: 150px;
+  }
+  .phone_info {
+    height: 110px;
+    width: 90px;
   }
 }
