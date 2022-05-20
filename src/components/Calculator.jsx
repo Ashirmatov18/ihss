@@ -219,12 +219,11 @@ export default function Calculator() {
               <div className={styles.currency}>
                 <div style={{ display: "flex" }}>
                   <Eur />
-                  <div style={{ fontFamily: "'Inter', sans-serif" }}>
+                  <div className={styles.value}>
                     <span
                       style={{
                         marginLeft: "10px",
                         fontSize: "20px",
-                        fontFamily: "Inter sans-serif",
                       }}
                     >
                       EUR
@@ -237,12 +236,11 @@ export default function Calculator() {
               <div className={styles.currency}>
                 <div style={{ display: "flex" }}>
                   <Rub />
-                  <div>
+                  <div className={styles.value}>
                     <span
                       style={{
                         marginLeft: "10px",
                         fontSize: "20px",
-                        fontFamily: "Inter sans-serif",
                       }}
                     >
                       RUB
@@ -254,15 +252,17 @@ export default function Calculator() {
             </div>
 
             <div className={styles.account}>
-              <h2
-                style={{
-                  fontSize: "23px",
-                  color: "#FFD600",
-                  fontFamily: '"Azeret Mono", monospace',
-                }}
-              >
-                РЕЗУЛЬТАТЫ РАССЧЕТА
-              </h2>
+              <div>
+                <h2
+                  style={{
+                    fontSize: "23px",
+                    color: "#FFD600",
+                    fontFamily: '"Azeret Mono", monospace',
+                  }}
+                >
+                  РЕЗУЛЬТАТЫ РАССЧЕТА
+                </h2>
+              </div>
               <div>
                 <div className={styles.point}>
                   <span className={styles.point_name}>

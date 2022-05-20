@@ -3,6 +3,7 @@ import Navbar from "../src/components/Navbar/Navbar";
 import Head from "next/head";
 import Footer from "../src/components/Footer";
 import Team from "../src/components/Team/Team";
+import MainLayout from "../src/components/ui/MainLayout";
 
 export default function news() {
   return (
@@ -11,9 +12,13 @@ export default function news() {
         <title>Team</title>
       </Head>
       <main>
-        <Navbar />
+        <MainLayout>
+          <Navbar />
+        </MainLayout>
         <Team />
-        <Footer />
+        <MainLayout>
+          <Footer />
+        </MainLayout>
       </main>
     </>
   );

@@ -10,8 +10,8 @@
 }
 
 .calc_title_line {
-  width: 510px;
-  margin-left: 0;
+  width: 40vw;
+  margin-left: calc(50% - 50vw);
   height: 9px;
   background-color: #00512e;
 }
