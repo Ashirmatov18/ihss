@@ -11,9 +11,9 @@ export default function NewsDetail() {
     <div>
       <div className={styles.news_detail}>
         <div className={styles.info_text}>
-          <h6>09:15 07.04.2022</h6>
-          <h1>Мы открылись в городе Москва!</h1>
-          <span>
+          <h6 style={{ color: "#989898" }}>09:15 07.04.2022</h6>
+          <h1 style={{ color: "#00512E" }}>Мы открылись в городе Москва!</h1>
+          <span style={{ color: "#989898" }}>
             Теперь вы можете прийти к нам в офис и получить от наших менеджеров{" "}
             <br />
             достоверную информацию и задать интересующие вопросы
@@ -22,8 +22,8 @@ export default function NewsDetail() {
 
         <div className={styles.main_ifo}>
           <Image src={msc} />
-          <div>
-            <span>
+          <div style={{ marginTop: "20px" }}>
+            <span style={{ color: "#989898" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus
               mauris bibendum lorem elit. Lorem massa in dictumst fermentum
               justo, lacus amet massa. Eu nunc sit consequat purus, nam. Pretium

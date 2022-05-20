@@ -6,7 +6,7 @@ import moscow from "../../assets/img/moscow.png";
 import talas from "../../assets/img/talas.png";
 import ui from "../../assets/img/ui.png";
 
-export default function NewsDetail() {
+export default function NewsDetailTalas() {
   return (
     <div>
       <div className={styles.news_detail}>
