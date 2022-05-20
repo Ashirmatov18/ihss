@@ -11,14 +11,13 @@ export default function programs() {
       <Head>
         <title>Программы</title>
       </Head>
-
-      <main>
-        <MainLayout>
+      <MainLayout>
+        <main>
           <Navbar />
-        </MainLayout>
-        <ReviewsVid />
-        <Footer />
-      </main>
+          <ReviewsVid />
+          <Footer />
+        </main>
+      </MainLayout>
     </div>
   );
 }

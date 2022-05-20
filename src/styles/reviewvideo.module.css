@@ -1,21 +1,17 @@
 .calc_title_name {
   font-weight: 700 bold;
-  padding: 0 100px;
   font-size: 48px;
   height: 58px;
   margin-bottom: 0;
 }
 
 .calc_title_line {
-  width: 30vw;
+  width: 50vw;
   margin-left: calc(50% - 50vw);
   height: 9px;
   background-color: #00512e;
 }
-.review_mod {
-  padding: 0 50px;
-  margin: 0 auto;
-}
+
 .first_modals {
   height: 300px;
   width: 500px;

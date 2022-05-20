@@ -11,16 +11,13 @@ export default function news() {
       <Head>
         <title>News</title>
       </Head>
-
-      <main>
-        <MainLayout>
+      <MainLayout>
+        <main>
           <Navbar />
-        </MainLayout>
-        <Newsishan />
-        <MainLayout>
+          <Newsishan />
           <Footer />
-        </MainLayout>
-      </main>
+        </main>
+      </MainLayout>
     </>
   );
 }

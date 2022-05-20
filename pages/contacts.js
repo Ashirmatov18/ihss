@@ -6,14 +6,12 @@ import MainLayout from "../src/components/ui/MainLayout";
 
 export default function contacts() {
   return (
-    <main>
-      <MainLayout>
+    <MainLayout>
+      <main>
         <Navbar />
-      </MainLayout>
-      <Contacts />
-      <MainLayout>
+        <Contacts />
         <Footer />
-      </MainLayout>
-    </main>
+      </main>
+    </MainLayout>
   );
 }

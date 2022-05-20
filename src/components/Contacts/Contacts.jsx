@@ -15,125 +15,133 @@ export default function Contacts() {
       <div className={styles.main_address}>
         <div className={styles.adress_map}>
           <Image src={adress} />
-          <h4 className={styles.title_address}>
-            НЖК "Ихсан Групп ЛТД" Головной офис
-          </h4>
-          <div className={styles.adrress}>
-            <div className={styles.location}>
-              <GoldLocation />
+          <div style={{ paddingLeft: "10px" }}>
+            <h4 className={styles.title_address}>
+              НЖК "Ихсан Групп ЛТД" Головной офис
+            </h4>
+            <div className={styles.adrress}>
+              <div className={styles.location}>
+                <GoldLocation />
+              </div>
+              <div className={styles.info_address}>
+                г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
+                <br /> 3-этаж.
+              </div>
             </div>
-            <div className={styles.info_address}>
-              г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
-              <br /> 3-этаж.
+            <div className={styles.adrress}>
+              <div className={styles.mobile}>
+                <GoldMobile />
+              </div>
+              <div>
+                +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
+                00 51 51
+              </div>
             </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mobile}>
-              <GoldMobile />
+            <div className={styles.adrress}>
+              <div className={styles.mess}>
+                <Mess />
+              </div>
+              <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
             </div>
-            <div>
-              +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
-              00 51 51
-            </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mess}>
-              <Mess />
-            </div>
-            <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
           </div>
         </div>
 
         <div className={styles.adress_map}>
           <Image src={adress} />
-          <h4 className={styles.title_address}>
-            НЖК "Ихсан Групп ЛТД" Головной офис
-          </h4>
-          <div className={styles.adrress}>
-            <div className={styles.location}>
-              <GoldLocation />
+          <div style={{ paddingLeft: "10px" }}>
+            <h4 className={styles.title_address}>
+              НЖК "Ихсан Групп ЛТД" Головной офис
+            </h4>
+            <div className={styles.adrress}>
+              <div className={styles.location}>
+                <GoldLocation />
+              </div>
+              <div className={styles.info_address}>
+                г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
+                <br /> 3-этаж.
+              </div>
             </div>
-            <div className={styles.info_address}>
-              г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
-              <br /> 3-этаж.
+            <div className={styles.adrress}>
+              <div className={styles.mobile}>
+                <GoldMobile />
+              </div>
+              <div>
+                +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
+                00 51 51
+              </div>
             </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mobile}>
-              <GoldMobile />
+            <div className={styles.adrress}>
+              <div className={styles.mess}>
+                <Mess />
+              </div>
+              <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
             </div>
-            <div>
-              +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
-              00 51 51
-            </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mess}>
-              <Mess />
-            </div>
-            <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
           </div>
         </div>
 
         <div className={styles.adress_map}>
           <Image src={adress} />
-          <h4 className={styles.title_address}>
-            НЖК "Ихсан Групп ЛТД" Головной офис
-          </h4>
-          <div className={styles.adrress}>
-            <div className={styles.location}>
-              <GoldLocation />
+          <div style={{ paddingLeft: "10px" }}>
+            <h4 className={styles.title_address}>
+              НЖК "Ихсан Групп ЛТД" Головной офис
+            </h4>
+            <div className={styles.adrress}>
+              <div className={styles.location}>
+                <GoldLocation />
+              </div>
+              <div className={styles.info_address}>
+                г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
+                <br /> 3-этаж.
+              </div>
             </div>
-            <div className={styles.info_address}>
-              г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
-              <br /> 3-этаж.
+            <div className={styles.adrress}>
+              <div className={styles.mobile}>
+                <GoldMobile />
+              </div>
+              <div>
+                +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
+                00 51 51
+              </div>
             </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mobile}>
-              <GoldMobile />
+            <div className={styles.adrress}>
+              <div className={styles.mess}>
+                <Mess />
+              </div>
+              <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
             </div>
-            <div>
-              +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
-              00 51 51
-            </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mess}>
-              <Mess />
-            </div>
-            <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
           </div>
         </div>
 
         <div className={styles.adress_map}>
           <Image src={adress} />
-          <h4 className={styles.title_address}>
-            НЖК "Ихсан Групп ЛТД" Головной офис
-          </h4>
-          <div className={styles.adrress}>
-            <div className={styles.location}>
-              <GoldLocation />
+          <div style={{ paddingLeft: "10px" }}>
+            <h4 className={styles.title_address}>
+              НЖК "Ихсан Групп ЛТД" Головной офис
+            </h4>
+            <div className={styles.adrress}>
+              <div className={styles.location}>
+                <GoldLocation />
+              </div>
+              <div className={styles.info_address}>
+                г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
+                <br /> 3-этаж.
+              </div>
             </div>
-            <div className={styles.info_address}>
-              г. Бишкек <br /> Раззакова / Боконбаева 113 , БЦ “Альтаир” ,{" "}
-              <br /> 3-этаж.
+            <div className={styles.adrress}>
+              <div className={styles.mobile}>
+                <GoldMobile />
+              </div>
+              <div>
+                +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
+                00 51 51
+              </div>
             </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mobile}>
-              <GoldMobile />
+            <div className={styles.adrress}>
+              <div className={styles.mess}>
+                <Mess />
+              </div>
+              <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
             </div>
-            <div>
-              +996 (700) 00 51 51 <br /> +996 (559) 00 51 51 <br /> +996 (778)
-              00 51 51
-            </div>
-          </div>
-          <div className={styles.adrress}>
-            <div className={styles.mess}>
-              <Mess />
-            </div>
-            <div className={styles.info_address}>ihsangroupltd@gmail.com</div>
           </div>
         </div>
       </div>

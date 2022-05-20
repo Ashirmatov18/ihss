@@ -13,15 +13,10 @@
   margin-bottom: 50px;
 }
 
-.main_address_title {
-  padding: 0 50px;
-  margin: 0 auto;
-}
-
 .main_address {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .adress_map {
