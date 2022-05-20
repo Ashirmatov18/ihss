@@ -10,25 +10,13 @@
   min-width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+  padding: 0 calc(50vw - 50%);
 }
 
 .video_player {
   margin-top: 100px !important;
   display: flex;
   justify-content: center;
-}
-
-.slider {
-  border-radius: 10px;
-  background-color: #fff;
-  width: 170px;
-  height: 60px;
-  margin-top: 70px;
-  float: right;
-  margin-right: 40px;
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 5px;
 }
 
 .but_review {
@@ -44,20 +32,16 @@
 
 .review_vid {
   width: 620px;
-  height: 650px;
   background-color: #fff;
   background-color: rgba(255, 255, 255, 0.7);
-  margin-top: 50px;
-  margin-left: 160px;
+  margin: 50px 0 50px 160px;
+  padding-bottom: 20px;
+  border-radius: 10px;
 }
 
 .video {
   width: 200px;
   height: 300px;
-}
-
-.happy_review {
-  padding-left: 130px;
 }
 
 .player_review {
@@ -86,10 +70,7 @@
     margin-left: 0;
   }
   .but_review {
-    margin-left: 0px;
-  }
-  .happy_review {
-    padding-left: 10px;
+    margin-left: 0;
   }
 }
 
@@ -120,11 +101,8 @@
     display: block;
   }
   .review_vid {
-    margin-top: 80px !important;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 10px;
-    height: 600px;
+    width: 100%;
+    margin: 80px 0;
   }
   .happy_review {
     text-align: center;

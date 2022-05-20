@@ -5,7 +5,6 @@ import quotes from "../../public/img/quotes.png";
 import acc from "../assets/img/Picture.png";
 import ReactPlayer from "react-player/lazy";
 import play from "../../public/img/playvid.png";
-import { Left, Right } from "../Review/ReviewIcons";
 
 export default function Review() {
   return (
@@ -76,14 +75,6 @@ export default function Review() {
                 playIcon={<Image src={play} />}
                 url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
               />
-            </div>
-            <div className={styles.slider}>
-              <div>
-                <Left />
-              </div>
-              <div>
-                <Right />
-              </div>
             </div>
           </div>
         </div>

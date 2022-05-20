@@ -1,17 +1,15 @@
 .main_info {
-  height: 950px;
   background-image: url("/img/main_info.png");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Inter", sans-serif;
-  min-width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
   position: relative;
-}
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 50px;
 
-.info_content {
-  padding: 0 50px;
+  margin: 0 calc(50% - 50vw);
+  padding: 100px calc(50vw - 50%);
 }
 
 .strong_name {
@@ -20,14 +18,15 @@
 }
 
 .info_stats {
-  display: flex;
-  justify-content: end;
-  padding-top: 100px;
+  display: grid;
   color: white;
+  grid-template: 1fr / repeat(4, min-content);
+  justify-content: flex-end;
+  grid-column-gap: 80px;
+  margin-bottom: 40px;
 }
 
 .stat {
-  margin-right: 100px;
   position: relative;
 }
 
@@ -36,8 +35,10 @@
 }
 
 .main_char {
-  font-weight: 700 bold;
+  font-weight: 700;
   font-size: 74px;
+  margin: 0;
+  color: #ffffff;
 }
 
 .butt {
@@ -45,7 +46,7 @@
   height: 60px;
   top: 184px;
   border-radius: 10px;
-  padding: 20px, 10px, 20px, 10px;
+  padding: 20px 10px;
   gap: 10px;
   background-color: #ffd600;
   color: #fff;
@@ -54,8 +55,6 @@
 }
 
 .opportunity_text {
-  margin-left: 130px;
-  margin-top: 60px;
 }
 
 .contact_us {
@@ -73,7 +72,6 @@
 .contact {
   display: flex;
   justify-content: right;
-  margin-right: 30px;
 }
 
 .modal_winow {
@@ -98,13 +96,13 @@
 }
 
 .circle {
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  background-color: #ffd600;
   position: absolute;
-  padding-bottom: 15px;
-  margin-top: -95px;
+  top: 20px;
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  background-color: #ffd600;
   z-index: 2;
   opacity: 0.3;
 }
@@ -141,35 +139,22 @@
   padding-left: 20px;
 }
 
-.halal {
-  margin-top: 100px;
+.button_follow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media only screen and (max-width: 1200px) {
-  .main_info {
-    width: 100%;
-    height: 1200px;
-  }
   .opportunity_text {
     margin-left: 40px;
-    /* margin-top: 200px; */
   }
 }
 
 @media only screen and (max-width: 992px) {
-  .main_info {
-    width: 100%;
-    height: 1200px;
-  }
   .opportunity_text {
     margin-left: 40px;
     /* margin-top: 200px; */
-  }
-  .info_stats {
-    justify-content: center;
-  }
-  .stat {
-    margin-right: 60px;
   }
 }
 
@@ -180,38 +165,28 @@
   .contact {
     display: none;
   }
-  .stat:last-child {
-    margin-right: 0;
+  .info_stats {
+    grid-template: 1fr / repeat(4, 1fr);
+    grid-column-gap: 10px;
   }
-  .halal {
-    text-align: center;
-  }
+}
+@media only screen and (max-width: 680px) {
   .main_char {
-    text-align: center;
+    font-size: 25px;
+  }
+  .strong_name {
+    font-size: 25px;
+    justify-content: space-between;
   }
   .button_follow {
     display: flex;
     justify-content: center;
   }
-}
-@media only screen and (max-width: 680px) {
-  .main_info {
-    height: 600px;
-    margin-bottom: 70px;
-  }
-  .info_stats {
-    justify-content: space-between;
-  }
-  .main_char {
-    font-size: 25px;
-  }
-  .stat {
-    margin-right: 20px;
-  }
-  .strong_name {
-    font-size: 25px;
-    justify-content: space-between;
-    padding-top: 30px;
+
+  .circle {
+    top: 0;
+    height: 30px;
+    width: 30px;
   }
 }
 
@@ -219,6 +194,7 @@
   .opportunity_text {
     margin-left: 10px;
   }
+
   .halal {
     margin-top: 10px;
   }
@@ -227,22 +203,11 @@
   }
   .main_char {
     text-align: center;
-    margin-top: 45px;
   }
   .stat {
-    margin-top: 20px;
-    font-size: 12px;
-  }
-  .info_stats {
-    display: flex;
-    justify-content: center;
+    font-size: 10px;
   }
   .strong_name {
     font-size: 15px;
-  }
-  .circle {
-    width: 17px;
-    height: 17px;
-    margin-top: -65px;
   }
 }
