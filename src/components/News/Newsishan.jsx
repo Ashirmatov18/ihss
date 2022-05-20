@@ -8,7 +8,7 @@ import Link from "next/link";
 
 export default function Newsishan() {
   return (
-    <div>
+    <div className={styles.main_news}>
       <div>
         <div className={styles.calc_title}>
           <h1 className={styles.calc_title_name}>НОВОСТИ</h1>
@@ -59,10 +59,12 @@ export default function Newsishan() {
           </div>
           <div className={styles.titleP_main}>
             <h4 className={styles.title_name}>“Ихсан Уй-було”</h4>
-            <span>
-              Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
-              <br /> Спорт br ордосунда өтүүчү...
-            </span>
+            <div className={styles.invite}>
+              <span>
+                Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
+                <br /> Спорт br ордосунда өтүүчү...
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -106,10 +108,12 @@ export default function Newsishan() {
           </div>
           <div className={styles.titleP_main}>
             <h4 className={styles.title_name}>“Ихсан Уй-було”</h4>
-            <span>
-              Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
-              <br /> Спорт br ордосунда өтүүчү...
-            </span>
+            <div className={styles.invite}>
+              <span>
+                Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
+                <br /> Спорт br ордосунда өтүүчү...
+              </span>
+            </div>
           </div>
         </div>
       </div>

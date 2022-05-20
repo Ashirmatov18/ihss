@@ -3,6 +3,7 @@ import Newsishan from "../src/components/News/Newsishan.jsx";
 import Navbar from "../src/components/Navbar/Navbar";
 import Head from "next/head";
 import Footer from "../src/components/Footer";
+import MainLayout from "../src/components/ui/MainLayout.jsx";
 
 export default function news() {
   return (
@@ -10,10 +11,15 @@ export default function news() {
       <Head>
         <title>News</title>
       </Head>
+
       <main>
-        <Navbar />
+        <MainLayout>
+          <Navbar />
+        </MainLayout>
         <Newsishan />
-        <Footer />
+        <MainLayout>
+          <Footer />
+        </MainLayout>
       </main>
     </>
   );
