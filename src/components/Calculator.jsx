@@ -257,7 +257,7 @@ export default function Calculator() {
                   style={{
                     fontSize: "23px",
                     color: "#FFD600",
-                    fontFamily: '"Azeret Mono", monospace',
+                    fontFamily: "NEXT",
                   }}
                 >
                   РЕЗУЛЬТАТЫ РАССЧЕТА
