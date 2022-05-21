@@ -7,6 +7,7 @@ import { CacheProvider } from "@emotion/react";
 import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import "../src/styles/globals.css";
+import RouterLoader from "../src/components/ui/RouterLoader";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -20,6 +21,7 @@ export default function MyApp(props) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <RouterLoader />
         <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>

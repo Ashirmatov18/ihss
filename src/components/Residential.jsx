@@ -1,32 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../styles/residential.module.css";
-import Image from "next/image";
-import first from "../../public/img/first.png";
-import second from "../../public/img/second.png";
-import third from "../../public/img/third.png";
-import fourth from "../../public/img/fourth.png";
-import fifth from "../../public/img/fifth.png";
-import halal from "../../public/img/halal.png";
+import Link from "next/link";
 import { Arrow } from "../Opportunity/OpportunityIcons";
+import axios from "axios";
+import { API_URL } from "../services/const";
+import { truncateString } from "../services/helpers";
 
+const getContent = async () => {
+  const { data } = await axios.get(`${API_URL}/content/`);
+  return data;
+};
 export default function Residential() {
+  const [contents, setContents] = useState([]);
+
+  useEffect(() => {
+    getContent().then(setContents);
+  }, []);
+
   return (
     <div>
       <div className={styles.first_residen}>
         <div className={styles.take_res}>
-          <div
-            className={styles.halal_icon}
-            style={{ paddingLeft: "130px", paddingTop: "30px" }}
-          >
-            <Image src={halal} />
-          </div>
           <h1
             style={{
               paddingLeft: "130px",
               fontFamily: '"Inter", sans-serif',
             }}
           >
-            Приобретение жилья <br /> сегодня с рассрочкой <br /> на 10 лет 0%
+            Приобретение жилья <br /> в рассрочку с низкой <br /> процентной
+            ставкой
           </h1>
           <div className={styles.button_style} style={{ paddingLeft: "130px" }}>
             <button className={styles.res_but}>Перейти</button>
@@ -41,112 +43,31 @@ export default function Residential() {
         </div>
 
         <div className={styles.container}>
-          <div className={styles.card}>
-            <figure className={styles.card__thumb}>
-              <Image
-                src={first}
-                alt="Picture by Kyle Cottrell"
-                className={styles.card__image}
-              />
-              <figcaption className={styles.card__caption}>
-                <h1 className={styles.card__title}>IHSAN</h1>
-                <h4>ул. Ч.Айтматова бывш. Пр. Мира</h4>
-                <p className={styles.card__snippet}>
-                  Molestie rhoncus dolor praesent ante turpis suspendisse
-                  viverra eu
-                </p>
-                <a href="" className={styles.card__button}>
-                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
-                </a>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div className={styles.card}>
-            <figure className={styles.card__thumb}>
-              <Image
-                src={second}
-                alt="Picture by Nathan Dumlao"
-                className={styles.card__image}
-              />
-              <figcaption className={styles.card__caption}>
-                <h2 className={styles.card__title}>IMRAN</h2>
-                <p className={styles.card__snippet}>
-                  Drinking more caffeine during the coronavirus lockdown? Heres
-                  how it can affect you over time and advice on making it better
-                  for you.
-                </p>
-                <a href="" className={styles.card__button}>
-                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
-                </a>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div className={styles.card}>
-            <figure className={styles.card__thumb}>
-              <Image
-                src={third}
-                alt="Picture by Daniel Lincoln"
-                className={styles.card__image}
-              />
-              <figcaption className={styles.card__caption}>
-                <h2 className={styles.card__title}>ЯСИН</h2>
-                <p className={styles.card__snippet}>
-                  On Friday, offices around the country celebrated the 15th
-                  annual Take Your Dog to Work Day. Though the events primary
-                  goal is to raise awareness for pet adoption, the unanticipated
-                  impact may be a slightly more relaxing work environment for
-                  any office choosing to participate.
-                </p>
-                <a href="" className={styles.card__button}>
-                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
-                </a>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div className={styles.card}>
-            <figure className={styles.card__thumb}>
-              <Image
-                src={fourth}
-                alt="Picture by Nathan Dumlao"
-                className={styles.card__image}
-              />
-              <figcaption className={styles.card__caption}>
-                <h2 className={styles.card__title}>ЯСИН </h2>
-                <p className={styles.card__snippet}>
-                  Drinking more caffeine during the coronavirus lockdown? Heres
-                  how it can affect you over time and advice on making it better
-                  for you.
-                </p>
-                <a href="" className={styles.card__button}>
-                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
-                </a>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div className={styles.card}>
-            <figure className={styles.card__thumb}>
-              <Image
-                src={fifth}
-                alt="Picture by Nathan Dumlao"
-                className={styles.card__image}
-              />
-              <figcaption className={styles.card__caption}>
-                <h2 className={styles.card__title}>IMRAN</h2>
-                <p className={styles.card__snippet}>
-                  Drinking more caffeine during the coronavirus lockdown? Heres
-                  how it can affect you over time and advice on making it better
-                  for you.
-                </p>
-                <a href="" className={styles.card__button}>
-                  Подробнее <Arrow style={{ paddingTop: "8px" }} />
-                </a>
-              </figcaption>
-            </figure>
-          </div>
+          {!!contents?.length &&
+            contents.map(({ id, description, address, title, image }) => (
+              <div className={styles.card} key={`jk-${id}`}>
+                <figure className={styles.card__thumb}>
+                  <div
+                    className={styles.card__image}
+                    style={{ backgroundImage: `url("${image}")` }}
+                  />
+                  <figcaption className={styles.card__caption}>
+                    <h1 className={styles.card__title}>
+                      {(title && truncateString(title, 18)) || ""}
+                    </h1>
+                    <h4 className={styles.card__address}>{address || ""}</h4>
+                    <p className={styles.card__snippet}>
+                      {description && truncateString(description, 100)}
+                    </p>
+                    <Link href={`/content/${id}/`} passHref>
+                      <a className={styles.card__button}>
+                        Подробнее <Arrow />
+                      </a>
+                    </Link>
+                  </figcaption>
+                </figure>
+              </div>
+            ))}
         </div>
       </div>
     </div>

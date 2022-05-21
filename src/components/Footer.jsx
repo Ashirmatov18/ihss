@@ -24,42 +24,34 @@ export default function Footer() {
                 <div className={styles.title}>
                   <Image src={ihs} />
                 </div>
-                <div className={styles.link} href="#">
-                  <span>
-                    Жилищный Кооператив <br /> Ихсан - это добровольное <br />{" "}
-                    объединение людей, <br />
-                    с целью совместного <br /> удовлетворения в <br />{" "}
-                    недвижимом имуществе.
-                  </span>
+                <div className={styles.link}>
+                  Жилищный Кооператив <br /> Ихсан - это добровольное <br />{" "}
+                  объединение людей, <br />
+                  с целью совместного <br /> удовлетворения в <br /> недвижимом
+                  имуществе.
                 </div>
                 <div className={styles.icons_link}>
-                  <div>
-                    <a
-                      href="https://www.instagram.com/ihsangroup.kg/"
-                      rel="noreferrer noopener"
-                      target="_blank"
-                    >
-                      <Inst />
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="https://wa.me/+996700005151"
-                      rel="noreferrer noopener"
-                      target="_blank"
-                    >
-                      <Whats />
-                    </a>
-                  </div>
-                  <div>
-                    <a
-                      href="https://www.youtube.com/channel/UCnfdcLSlbHlORf6fEx6RBAA"
-                      rel="noreferrer noopener"
-                      target="_blank"
-                    >
-                      <You />
-                    </a>
-                  </div>
+                  <a
+                    href="https://www.instagram.com/ihsangroup.kg/"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <Inst />
+                  </a>
+                  <a
+                    href="https://wa.me/+996700005151"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <Whats />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UCnfdcLSlbHlORf6fEx6RBAA"
+                    rel="noreferrer noopener"
+                    target="_blank"
+                  >
+                    <You />
+                  </a>
                 </div>
               </div>
             </div>
@@ -81,7 +73,7 @@ export default function Footer() {
                   <div className={styles.link}>Отзывы</div>
                 </a>
               </Link>
-              <Link href={"/news"} passHref>
+              <Link href={"/index"} passHref>
                 <a>
                   <div className={styles.link}>Новости</div>
                 </a>
@@ -97,22 +89,18 @@ export default function Footer() {
             </div>
             <div className={styles.column}>
               <div className={styles.title}>Наши услуги</div>
-              <div className={styles.link} href="#">
-                Программы
-              </div>
-              <div className={styles.link} href="#">
-                Гарантии
-              </div>
-              <div className={styles.link} href="#">
-                Преимущества
-              </div>
-              <div className={styles.link} href="#">
-                Условия
-              </div>
+              <Link href={"/programs"} passHref>
+                <a>
+                  <div className={styles.link}>Программы</div>
+                </a>
+              </Link>
+              <div className={styles.link}>Гарантии</div>
+              <div className={styles.link}>Преимущества</div>
+              <div className={styles.link}>Условия</div>
             </div>
             <div className={styles.column}>
               <div className={styles.title}>Контакты</div>
-              <div className={styles.link} href="#">
+              <div className={styles.link}>
                 <div>
                   <Message />
                 </div>
@@ -122,41 +110,28 @@ export default function Footer() {
                   </span>
                 </div>
               </div>
-              <div className={styles.link} href="#">
+              <div className={styles.link}>
                 <Phone />
                 <span style={{ marginLeft: "10px" }}>+996-(555)-555-555</span>
               </div>
-              <div className={styles.link} href="#">
+              <div className={styles.link}>
                 <Location />
                 <span style={{ marginLeft: "10px" }}>
                   г. Бишкек, Раззакова / Боконбаева 113, <br /> БЦ “Альтаир”,
                   3-этаж.
                 </span>
               </div>
-              <div className={styles.link} href="#">
+              <div className={styles.link}>
                 <Location />
                 <span style={{ marginLeft: "10px" }}>
                   г. Бишкек, рынок «Орто-Сай», Суеркулова 5/1
                 </span>
               </div>
-              <div className={styles.link} href="#">
+              <div className={styles.link}>
                 <Location />
                 <span style={{ marginLeft: "10px" }}>
                   г. Бишкек, Чуй/ Кулиева 20, ТЦ “Жан-Сали”, 5 этаж
                 </span>
-              </div>
-            </div>
-
-            <div className={styles.column}>
-              <div className={styles.feedback}>
-                <div className={styles.title}>Обратная связь</div>
-                <div className={styles.link} href="#">
-                  <input
-                    className={styles.inp_footer}
-                    type="text"
-                    placeholder="Комментарий..."
-                  />
-                </div>
               </div>
             </div>
           </div>

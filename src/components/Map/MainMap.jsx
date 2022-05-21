@@ -173,7 +173,6 @@ function MainMap() {
     setSelectedRegion(options.find((item) => focusedLocation === item.id));
     setModal(true);
     setFocusedLocation(focusedLocation);
-    console.log(selectRegion.data[0].title);
   };
 
   const getLocationclassName = (location, index) => {

@@ -21,29 +21,29 @@ export default function Programs() {
           <div className={styles.program_traffic}>
             <h2>Популярный</h2>
             <div className={styles.tarif}>
-              <h3>25+4</h3>
+              <h3>25+7%</h3>
             </div>
           </div>
           <div className={styles.efficiency}>
             <div>
               <span>Единонаразовая комиссия</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
           </div>
         </div>
@@ -52,29 +52,29 @@ export default function Programs() {
           <div className={styles.program_traffic}>
             <h2>Удобный</h2>
             <div className={styles.tarif}>
-              <h3>25+4</h3>
+              <h3>25+7%</h3>
             </div>
           </div>
           <div className={styles.efficiency}>
             <div>
               <span>Единонаразовая комиссия</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
           </div>
         </div>
@@ -83,29 +83,29 @@ export default function Programs() {
           <div className={styles.program_traffic}>
             <h2>Выгодный</h2>
             <div className={styles.tarif}>
-              <h3>25+4</h3>
+              <h3>35+7%</h3>
             </div>
           </div>
           <div className={styles.efficiency}>
             <div>
               <span>Единонаразовая комиссия</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
           </div>
         </div>
@@ -114,29 +114,29 @@ export default function Programs() {
           <div className={styles.program_traffic}>
             <h2>Авто</h2>
             <div className={styles.tarif}>
-              <h3>25+4</h3>
+              <h3>50+7%</h3>
             </div>
           </div>
           <div className={styles.efficiency}>
             <div>
               <span>Единонаразовая комиссия</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
-              <h4>4%</h4>
+              <h4>7%</h4>
             </div>
           </div>
         </div>

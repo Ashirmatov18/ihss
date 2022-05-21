@@ -138,7 +138,7 @@
 
 @font-face {
   font-family: "NEXT";
-  src: url("../../public/fonts/NEXT\ ART_Bold.otf") format("truetype");
+  src: url("/fonts/NEXT\ ART_Bold.otf") format("truetype");
   font-style: normal;
   font-weight: 700;
 }
@@ -148,4 +148,11 @@ button {
   text-decoration: none;
   outline: none;
   border: none;
+}
+
+.Mui-focused {
+  /*color: #00512e !important;*/
+}
+.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #00512e !important;
 }

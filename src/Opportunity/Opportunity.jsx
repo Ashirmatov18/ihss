@@ -1,14 +1,8 @@
 import React, { useState } from "react";
 import styles from "../styles/opportunity.module.css";
-import { useClickOutside } from "../hooks/useClickOutside";
-import { W, M } from "./OpportunityIcons";
 
 export default function Opportunity() {
-  const [modal, setModal] = useState(false);
-
-  let domnode = useClickOutside(() => {
-    setModal(false);
-  });
+  const [modal,] = useState(false);
 
   return (
     <div className={styles.main_info}>
@@ -37,7 +31,7 @@ export default function Opportunity() {
         </div>
         <div className={styles.opportunity_text}>
           <div className={styles.halal}>
-            <img src="/img/halal.png" alt="" />
+            {/*<img src="/img/halal.png" alt="" />*/}
           </div>
           <div className={styles.bottom_info}>
             <h1 className={styles.main_char}>
@@ -47,16 +41,6 @@ export default function Opportunity() {
               <button className={styles.butt}>Перейти</button>
             </div>
           </div>
-        </div>
-        <div ref={domnode} className={styles.contact}>
-          {/*<div className={styles.contact_us}>*/}
-          {/*  <div>*/}
-          {/*    <W />*/}
-          {/*  </div>*/}
-          {/*  <div>*/}
-          {/*    <M />*/}
-          {/*  </div>*/}
-          {/*</div>*/}
         </div>
       </div>
 

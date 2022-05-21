@@ -1,39 +1,52 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import styles from "../../styles/newsdetail.module.css";
-import Image from "next/image";
-import msc from "../../assets/img/msc.png";
-import moscow from "../../assets/img/moscow.png";
-import talas from "../../assets/img/talas.png";
-import ui from "../../assets/img/ui.png";
+import { useRouter } from "next/router";
+import axios from "axios";
+import { API_URL } from "../../services/const";
+import { format } from "date-fns";
+import { NewsList } from "./Newsishan";
+
+const getNews = async () => {
+  const { data } = await axios.get(`${API_URL}/news/`);
+  return data;
+};
 
 export default function NewsDetail() {
+  const {
+    query: { id: newsId },
+  } = useRouter();
+
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    getNews().then(setNews);
+  }, []);
+
+  const newsD = useMemo(
+    () => news.find(({ id }) => +id === +newsId),
+    [news, newsId]
+  );
+
   return (
     <div>
       <div className={styles.news_detail}>
         <div className={styles.info_text}>
-          <h6 style={{ color: "#989898" }}>09:15 07.04.2022</h6>
-          <h1 style={{ color: "#00512E" }}>Мы открылись в городе Москва!</h1>
-          <span style={{ color: "#989898" }}>
-            Теперь вы можете прийти к нам в офис и получить от наших менеджеров{" "}
-            <br />
-            достоверную информацию и задать интересующие вопросы
-          </span>
+          <h6 style={{ color: "#989898" }}>
+            {newsD?.create_at &&
+              format(new Date(newsD.create_at), "HH:mm dd-MM-yyyy")}
+          </h6>
+          <h1 style={{ color: "#00512E" }}>{newsD?.title && newsD.title}</h1>
         </div>
 
         <div className={styles.main_ifo}>
-          <Image src={msc} />
+          {newsD?.image && (
+            <div
+              className={styles.news_detail_image}
+              style={{ backgroundImage: `url("${newsD?.image}")` }}
+            />
+          )}
           <div style={{ marginTop: "20px" }}>
-            <span style={{ color: "#989898" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tellus
-              mauris bibendum lorem elit. Lorem massa in dictumst fermentum
-              justo, lacus amet massa. Eu nunc sit consequat purus, nam. Pretium
-              arcu, molestie euismod sed venenatis, aliquam odio. In platea diam
-              cursus arcu sit eget. Mollis maecenas sapien vitae sagittis, arcu
-              felis cras neque faucibus. Maecenas nascetur pretium leo accumsan
-              nibh. Cursus arcu fusce donec varius suspendisse id amet nisl.
-              Aliquet scelerisque sit eget eu. Amet, justo, sit erat tempus quis
-              eu. Potenti dignissim tellus et amet.
-            </span>
+            <span style={{ color: "#989898" }}>{newsD?.description}</span>
           </div>
         </div>
       </div>
@@ -45,52 +58,7 @@ export default function NewsDetail() {
         </div>
       </div>
 
-      <div className={styles.news_main}>
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={moscow} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>
-              Мы открылись <br /> в городе Москва
-            </h4>
-            <span className={styles.mini_desc}>
-              Теперь вы можете прийти к нам в офис <br /> и получить от наших
-              менеджеров <br /> достоверную информацию и задать <br />{" "}
-              интересующие вопросы
-            </span>
-          </div>
-        </div>
-
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={talas} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>
-              Мы открылись <br /> в городе Таласе
-            </h4>
-            <span className={styles.mini_desc}>
-              Теперь вы можете прийти к нам в офис <br /> и получить от наших
-              менеджеров <br /> достоверную информацию и задать <br />{" "}
-              интересующие вопросы
-            </span>
-          </div>
-        </div>
-
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={ui} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>“Ихсан Уй-було”</h4>
-            <span>
-              Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
-              <br /> Спорт br ордосунда өтүүчү...
-            </span>
-          </div>
-        </div>
-      </div>
+      <NewsList news={news.filter(({ id }) => +id !== +newsId)} />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,6 +13,7 @@ import { Insta } from "./NavbarIcons";
 export default function Navbar() {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+  const [num, setNum] = useState("+996 700 00 51 51");
 
   return (
     <nav className={styles.burger_menu}>
@@ -20,9 +21,15 @@ export default function Navbar() {
         <div className={styles.first_nav}>
           <ul className={styles.first_nav_logo}>
             <li>
-              <div className={styles.first_mobile}>
-                <span>+996 700 00 51 51</span>
-              </div>
+              <select
+                className={styles.nums}
+                value={num}
+                onChange={({ target: { value } }) => setNum(value)}
+              >
+                <option value={"+996 700 00 51 51"}>+996 700 00 51 51</option>
+                <option value={"+996 559 00 51 51"}>+996 559 00 51 51</option>
+                <option value={"+996 778 00 51 51"}>+996 778 00 51 51</option>
+              </select>
             </li>
             <li className={styles.social_network}>
               <a
@@ -53,7 +60,7 @@ export default function Navbar() {
             </li>
 
             <li style={{ marginRight: "70px" }}>
-              г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж.{" "}
+              г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж
             </li>
           </ul>
         </div>
@@ -86,22 +93,7 @@ export default function Navbar() {
                           color="inherit"
                           component="a"
                         >
-<<<<<<< HEAD
-                          <div className={styles.popup_window}>
-                            <div>
-                              <div>
-                                <span className={style.popup_content}>
-                                  Команда
-                                </span>
-                              </div>
-                              <div>lorem</div>
-                              <div>Lorem</div>
-                            </div>
-                          </div>
-                          О нас
-=======
-                          O нас
->>>>>>> de41852b7da87ea6a9317b173bba43ef29472e6b
+                          Команда
                         </Typography>
                       </Link>
 

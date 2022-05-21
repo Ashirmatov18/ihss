@@ -1,5 +1,11 @@
+.contacts_mainWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
 .calc_title_name {
-  font-weight: 700 bold;
+  font-weight: 700;
   font-size: 48px;
   height: 58px;
   margin-bottom: 0;
@@ -13,6 +19,14 @@
   margin-bottom: 50px;
 }
 
+.contacts_image {
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+
 .main_address {
   display: flex;
   flex-wrap: wrap;
@@ -20,27 +34,27 @@
 }
 
 .adress_map {
-  margin-bottom: 150px;
+  width: 100%;
 }
 
-.adrress {
+.contacts_wrapper {
   display: flex;
-  margin-top: 10px;
+  flex-direction: column;
+  grid-row-gap: 20px;
 }
 
-.location {
-  padding-top: 15px;
-  margin-right: 25px;
+.contacts {
+  display: grid;
+  grid-template: 1fr / 30px auto;
+  grid-column-gap: 20px;
+}
+
+.icon {
   color: #989898;
-}
-
-.mess {
-  margin-right: 25px;
-  color: #989898;
-}
-
-.mobile {
-  margin-right: 34px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title_address {
@@ -49,11 +63,17 @@
 }
 
 .info_address {
+  align-self: center;
   color: #989898;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-width: 810px) {
   .calc_title_line {
     width: 70vw;
+  }
+  .contacts_mainWrapper {
+    grid-template-columns: 1fr;
   }
 }

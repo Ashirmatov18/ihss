@@ -1,9 +1,5 @@
-/* .main_team {
-  padding: 0 50px;
-} */
-
 .calc_title_name {
-  font-weight: 700 bold;
+  font-weight: 700;
   font-size: 48px;
   height: 58px;
   margin-bottom: 0;
@@ -18,43 +14,58 @@
 
 .news {
   width: 380px;
-  height: 550px;
+  display: grid;
+  grid-template: 313px 1fr / 1fr;
   padding: 0;
   margin-right: 0;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   border-radius: 10px;
+  background: #fcfcfc;
 }
 
 .title_name {
   font-size: 24px !important;
   color: #00512e;
   margin-bottom: 5px;
-  font-weight: 700 bold;
+  font-weight: 700;
 }
 
 .titleP_main {
-  padding-left: 30px;
   font-size: 14px;
-  font-weight: 400 bold;
+  font-weight: 400;
+  padding: 0 0 20px;
 }
 
 .teammates {
   display: flex;
-  justify-content: space-evenly;
+  grid-gap: 20px;
   margin-top: 40px;
   flex-wrap: wrap;
 }
 
+.teammates_photos {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px 10px 0 0;
+}
+
 .first_team {
   display: flex;
-  justify-content: space-evenly;
-  margin-bottom: 90px;
+  grid-gap: 37px;
+}
+
+.first_team > div {
+  width: 100%;
+}
+
+.first_team:nth-child(2) {
+  flex-direction: row-reverse;
 }
 
 .ihs_first {
   font-size: 36px;
   color: #00512e;
-  padding-top: 110px;
 }
 
 .second_team {
@@ -71,11 +82,32 @@
 .titleP_main {
   text-align: center;
 }
-.ermat {
-  padding-top: 110px;
+
+.main_team {
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 80px;
+}
+
+.aboutWrapper {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 80px;
+}
+
+.aboutImage {
+  min-height: 500px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
 }
 
 @media only screen and (max-width: 992px) {
+  .teammates,
+  .aboutWrapper {
+    justify-content: center;
+  }
   .first_team {
     flex-wrap: wrap;
   }
@@ -109,16 +141,7 @@
     display: flex;
     justify-content: center;
   }
-  /* .second_team {
-    display: flex;
-    justify-content: space-evenly;
-  } */
-}
 
-@media only screen and (max-width: 992px) {
-  .main_team {
-    padding: 0 15px;
-  }
   .first_team {
     justify-content: start;
   }

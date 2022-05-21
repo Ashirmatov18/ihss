@@ -1,122 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/newsishan.module.css";
-import Image from "next/image";
-import moscow from "../../assets/img/moscow.png";
-import talas from "../../assets/img/talas.png";
-import ui from "../../assets/img/ui.png";
 import Link from "next/link";
+import axios from "axios";
+import { API_URL } from "../../services/const";
+import { truncateString } from "../../services/helpers";
+
+const getNews = async () => {
+  const { data } = await axios.get(`${API_URL}/news/`);
+  return data;
+};
 
 export default function Newsishan() {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    getNews().then(setNews);
+  }, []);
+
   return (
-    <div className={styles.main_news}>
+    <div>
       <div>
-        <div className={styles.calc_title}>
+        <div>
           <h1 className={styles.calc_title_name}>НОВОСТИ</h1>
           <hr className={styles.calc_title_line} />
-        </div>
-      </div>
-
-      <div className={styles.news_main}>
-        <Link href="/newsdetailmoscow">
-          <div className={styles.news}>
-            <div>
-              <Image className={styles.img_m} src={moscow} />
-            </div>
-            <div className={styles.titleP_main}>
-              <h4 className={styles.title_name}>
-                Мы открылись <br /> в городе Москва
-              </h4>
-              <span className={styles.mini_desc}>
-                Теперь вы можете прийти к нам в офис <br /> и получить от наших
-                менеджеров <br /> достоверную информацию и задать <br />{" "}
-                интересующие вопросы
-              </span>
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/newsdetailtalas">
-          <div className={styles.news}>
-            <div>
-              <Image className={styles.img_m} src={talas} />
-            </div>
-            <div className={styles.titleP_main}>
-              <h4 className={styles.title_name}>
-                Мы открылись <br /> в городе Таласе
-              </h4>
-              <span className={styles.mini_desc}>
-                Теперь вы можете прийти к нам в офис <br /> и получить от наших
-                менеджеров <br /> достоверную информацию и задать <br />{" "}
-                интересующие вопросы
-              </span>
-            </div>
-          </div>
-        </Link>
-
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={ui} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>“Ихсан Уй-було”</h4>
-            <div className={styles.invite}>
-              <span>
-                Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
-                <br /> Спорт br ордосунда өтүүчү...
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className={styles.news_main}>
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={moscow} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>
-              Мы открылись <br /> в городе Москва
-            </h4>
-            <span className={styles.mini_desc}>
-              Теперь вы можете прийти к нам в офис <br /> и получить от наших
-              менеджеров <br /> достоверную информацию и задать <br />{" "}
-              интересующие вопросы
-            </span>
-          </div>
-        </div>
-
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={talas} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>
-              Мы открылись <br /> в городе Таласе
-            </h4>
-            <span className={styles.mini_desc}>
-              Теперь вы можете прийти к нам в офис <br /> и получить от наших
-              менеджеров <br /> достоверную информацию и задать <br />{" "}
-              интересующие вопросы
-            </span>
-          </div>
-        </div>
-
-        <div className={styles.news}>
-          <div>
-            <Image className={styles.img_m} src={ui} />
-          </div>
-          <div className={styles.titleP_main}>
-            <h4 className={styles.title_name}>“Ихсан Уй-було”</h4>
-            <div className={styles.invite}>
-              <span>
-                Сиздерди 9-АПРЕЛЬ күнү Бишкек <br /> шаарында, Кожомкул атындагы
-                <br /> Спорт br ордосунда өтүүчү...
-              </span>
-            </div>
-          </div>
+          <NewsList news={news}/>
         </div>
       </div>
     </div>
   );
 }
+
+export const NewsList = ({ news }) => (
+  <div className={styles.news_main}>
+    {!!news?.length &&
+      news.map(({ id, description, title, image }) => (
+        <Link href={`/news/${id}`} key={`news-${id}`} passHref>
+          <a>
+            <div className={styles.news}>
+              <div
+                className={styles.newsImage}
+                style={{ backgroundImage: `url("${image}")` }}
+              />
+              <div className={styles.titleP_main}>
+                <h4 className={styles.title_name}>
+                  {title ? truncateString(title, 150) : ""}
+                </h4>
+                <p className={styles.mini_desc}>
+                  {description ? truncateString(description, 200) : ""}
+                </p>
+              </div>
+            </div>
+          </a>
+        </Link>
+      ))}
+  </div>
+);

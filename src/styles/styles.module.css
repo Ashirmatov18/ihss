@@ -28,6 +28,12 @@
   grid-gap: 30px;
 }
 
+.nums {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+
 .button_construction {
   background-color: #ffd600;
   color: #fff !important;

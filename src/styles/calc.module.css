@@ -37,16 +37,24 @@
   width: 280px;
   height: 50px;
   top: 10px;
-  background-color: #00512e;
-  color: white;
   border-radius: 7px;
   font-size: 18px;
-  font-weight: 600;
-}
-
-.but_filter_second:last-child {
   background-color: #fff;
   color: #989898;
+  font-weight: 600;
+  transition: 0.2s ease-out;
+}
+
+.but_filter_second svg path {
+  fill: #989898;
+}
+
+.but_filter_second.but_active {
+  background-color: #00512e;
+  color: white;
+}
+.but_filter_second.but_active svg path {
+  fill: #fff;
 }
 
 .currency {
@@ -85,7 +93,7 @@
   display: grid;
   grid-template: 1fr / auto min-content;
 }
-.point_price >div {
+.point_price > div {
   width: 100%;
   border-bottom: 1px dashed #ff9c00;
   margin-bottom: 13px;
@@ -141,10 +149,22 @@
   font-size: 18px;
   font-weight: 600;
   border: 0;
+  cursor: pointer;
 }
 
 .account {
   margin-top: 150px;
+}
+
+.select {
+  height: 48px;
+  width: 100%;
+  background: #00512e;
+  border-radius: 10px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  padding: 0 10px;
 }
 
 .last_one {

@@ -1,19 +1,19 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import styles from "../styles/calc.module.css";
 import Box from "@mui/material/Box";
-import Slider from "@mui/material/Slider";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import { Usd, Eur, Rub, Auto, Home } from "../Calculator/CalculatorIcons";
+import { TextField } from "@mui/material";
+import RouterLoader from "./ui/RouterLoader";
 
 export default function Calculator() {
   const [months, setMonths] = React.useState("none");
   const [currency, setCurrency] = React.useState("usd");
   const [paymentPercent, setPaymentPercent] = React.useState(50);
   const [costValue, setCostValue] = React.useState(10000);
+  const [loading, setLoading] = useState(false);
+  const [calcType, setCalcType] = useState(false);
   const initialFee = useMemo(
     () => ((costValue || 0) * ((paymentPercent || 0) / 100)).toFixed(0),
     [costValue, paymentPercent]
@@ -50,6 +50,10 @@ export default function Calculator() {
     const monthly = (
       months !== "none" ? (costValue - firstPayment) / months : 0
     ).toFixed(1);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 600);
     setCalculationResult(() => {
       return {
         cost: costValue,
@@ -70,6 +74,7 @@ export default function Calculator() {
 
   return (
     <div className={styles.main_calc}>
+      {loading && <RouterLoader open={loading} />}
       <div className={styles.calc_title}>
         <h1 className={styles.calc_title_name}>КАЛЬКУЛЯТОР</h1>
         <hr className={styles.calc_title_line} />
@@ -78,14 +83,24 @@ export default function Calculator() {
       <div className={styles.calc_info}>
         <div className={styles.first_section}>
           <div className={styles.filter_name}>
-            <button className={styles.but_filter_second}>
+            <button
+              onClick={() => setCalcType(!calcType)}
+              className={`${styles.but_filter_second} ${
+                !calcType ? styles.but_active : ""
+              }`}
+            >
               <div className={styles.button_location}>
                 <div style={{ paddingTop: "3px" }}>Недвижимости</div>{" "}
                 <Home style={{ marginBottom: "3px" }} />
               </div>
             </button>
 
-            <button className={styles.but_filter_second}>
+            <button
+              onClick={() => setCalcType(!calcType)}
+              className={`${styles.but_filter_second} ${
+                calcType ? styles.but_active : ""
+              }`}
+            >
               <div className={styles.button_location}>
                 <div style={{ paddingTop: "3px" }}>Автомобиль</div>{" "}
                 <Auto style={{ marginBottom: "3px" }} />
@@ -98,18 +113,16 @@ export default function Calculator() {
               {currencySym}{" "}
             </h2>
             <Box>
-              <Slider
-                sx={{
-                  width: "100%",
-                  color: "#FFD600",
+              <TextField
+                onChange={({ target: { value } }) => {
+                  if (value < 0) {
+                    setCostValue(0);
+                  } else setCostValue(+value);
                 }}
-                min={10000}
-                max={currency === "usd" ? 200000 : 17000000}
                 value={costValue}
-                step={100}
-                onChange={(e) => setCostValue(e.target.value)}
-                aria-label="Default"
-                valueLabelDisplay="auto"
+                type="number"
+                fullWidth
+                placeholder={"Стоимость"}
               />
             </Box>
             <div className={styles.but_group}>
@@ -174,35 +187,25 @@ export default function Calculator() {
           <div>
             <h2>Срок договора</h2>
             <Box sx={{ minWidth: 120 }}>
-              <Select
-                fullWidth
-                style={{
-                  backgroundColor: "#00512E",
-                  color: "white",
-                  borderRadius: "10px",
-                }}
+              <select
+                className={styles.select}
                 value={months}
                 onChange={handleChange}
               >
-                <MenuItem style={{ display: "none" }} value={"none"}>
+                <option style={{ display: "none" }} value="none">
                   Срок
-                </MenuItem>
-                {/*{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((year) => (*/}
-                {/*  <MenuItem key={`finance-${year}`} value={year * 12}>*/}
-                {/*    {year} год*/}
-                {/*  </MenuItem>*/}
-                {/*))}*/}
-                <MenuItem value={12}>1 год</MenuItem>
-                <MenuItem value={24}>2 года</MenuItem>
-                <MenuItem value={36}>3 года</MenuItem>
-                <MenuItem value={48}>4 года</MenuItem>
-                <MenuItem value={60}>5 лет</MenuItem>
-                <MenuItem value={72}>6 лет</MenuItem>
-                <MenuItem value={84}>7 лет</MenuItem>
-                <MenuItem value={96}>8 лет</MenuItem>
-                <MenuItem value={108}>9 лет</MenuItem>
-                <MenuItem value={120}>10 лет</MenuItem>
-              </Select>
+                </option>
+                <option value="12">1 год</option>
+                <option value="24">2 года</option>
+                <option value="36">3 года</option>
+                <option value="48">4 года</option>
+                <option value="60">5 лет</option>
+                <option value="72">6 лет</option>
+                <option value="84">7 лет</option>
+                <option value="96">8 лет</option>
+                <option value="108">9 лет</option>
+                <option value="120">10 лет</option>
+              </select>
             </Box>
             <button className={styles.compute} onClick={handleCalculation}>
               Рассчитать
@@ -233,7 +236,7 @@ export default function Calculator() {
                     </span>
                   </div>
                 </div>
-                <span> 84.90 СОМ</span>
+                <span> 80 СОМ</span>
               </div>
 
               <div className={styles.currency}>
@@ -250,7 +253,7 @@ export default function Calculator() {
                     </span>
                   </div>
                 </div>
-                <span> 100.27 СОМ</span>
+                <span> 84.5 СОМ</span>
               </div>
 
               <div className={styles.currency}>
@@ -267,7 +270,7 @@ export default function Calculator() {
                     </span>
                   </div>
                 </div>
-                <span> 1.14 СОМ</span>
+                <span> 1.3 СОМ</span>
               </div>
             </div>
 

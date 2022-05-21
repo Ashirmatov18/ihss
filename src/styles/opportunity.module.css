@@ -1,4 +1,5 @@
 .main_info {
+  min-height: 700px;
   background-image: url("/img/main_info.png");
   background-repeat: no-repeat;
   background-size: cover;
