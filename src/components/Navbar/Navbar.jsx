@@ -129,8 +129,18 @@ export default function Navbar() {
                           color="inherit"
                           component="div"
                         >
-                          <span className={styles.popup_window}>lorem</span>О
-                          нас
+                          <div className={styles.popup_window}>
+                            <div>
+                              <div>
+                                <span className={style.popup_content}>
+                                  Команда
+                                </span>
+                              </div>
+                              <div>lorem</div>
+                              <div>Lorem</div>
+                            </div>
+                          </div>
+                          О нас
                         </Typography>
                       </Link>
 

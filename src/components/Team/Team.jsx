@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import styles from "../../styles/team.module.css";
 import Image from "next/image";
 import er from "../../assets/img/er.png";
@@ -8,6 +9,20 @@ import aki from "../../assets/img/akin.png";
 import erk from "../../assets/img/erk.png";
 
 export default function Team() {
+  const [about, setAbout] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("http://64.227.168.246/api/v1/abouts/about")
+      .then(({ data }) => {
+        console.log(data);
+        setAbout(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <div className={styles.main_team}>
       <div>
@@ -17,18 +32,25 @@ export default function Team() {
         </div>
 
         <div className={styles.teammates}>
-          {" "}
-          <div className={styles.news}>
-            <div>
-              <Image className={styles.img_m} src={er} />
+          {about.map((a) => (
+            <div className={styles.news} key={a.id}>
+              <div>
+                <Image
+                  className={styles.img_m}
+                  src={a.image}
+                  layout="fill"
+                  // objectFit="contain"
+                  // width={40}
+                  // height={40}
+                />
+              </div>
+              <div className={styles.titleP_main}>
+                <h4 className={styles.title_name}>{a.title}т</h4>
+                <span className={styles.mini_desc}>{a.content}</span>
+              </div>
             </div>
-            <div className={styles.titleP_main}>
-              <h4 className={styles.title_name}>Абылкасымов Эрмат</h4>
-              <span className={styles.mini_desc}>
-                Председатель правления НЖК <br /> "Ихсан Групп ЛТД"
-              </span>
-            </div>
-          </div>
+          ))}
+
           <div className={styles.news}>
             <div>
               <Image className={styles.img_m} src={ak} />
