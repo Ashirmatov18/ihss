@@ -2,9 +2,6 @@ import React from "react";
 import styles from "../styles/footer.module.css";
 import Image from "next/image";
 import ihs from "../../public/img/ihs.png";
-import message from "../assets/img/Message.png";
-import phone from "../assets/img/Mobile.png";
-import location from "../assets/img/Location.png";
 import Link from "next/link";
 import {
   Inst,
@@ -37,13 +34,31 @@ export default function Footer() {
                 </div>
                 <div className={styles.icons_link}>
                   <div>
-                    <Inst />
+                    <a
+                      href="https://www.instagram.com/ihsangroup.kg/"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      <Inst />
+                    </a>
                   </div>
                   <div>
-                    <Whats />
+                    <a
+                      href="https://wa.me/+996700005151"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      <Whats />
+                    </a>
                   </div>
                   <div>
-                    <You />
+                    <a
+                      href="https://www.youtube.com/channel/UCnfdcLSlbHlORf6fEx6RBAA"
+                      rel="noreferrer noopener"
+                      target="_blank"
+                    >
+                      <You />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -51,22 +66,32 @@ export default function Footer() {
 
             <div className={styles.column}>
               <div className={styles.title}>О Кооперативе</div>
-              <div className={styles.link} href="#">
-                О нас
-              </div>
-              <div className={styles.link} href="#">
-                Почему мы
-              </div>
-              <div className={styles.link} href="#">
-                Отзывы
-              </div>
-              <div className={styles.link} href="#">
-                Новости
-              </div>
-              <div className={styles.link} href="#">
-                Сертификаты
-              </div>
-              <Link href="/privacy-policy">
+              <Link href={"/team"} passHref>
+                <a>
+                  <div className={styles.link}>О нас</div>
+                </a>
+              </Link>
+              <Link href={"/"} passHref>
+                <a>
+                  <div className={styles.link}>Почему мы</div>
+                </a>
+              </Link>
+              <Link href={"/review"} passHref>
+                <a>
+                  <div className={styles.link}>Отзывы</div>
+                </a>
+              </Link>
+              <Link href={"/news"} passHref>
+                <a>
+                  <div className={styles.link}>Новости</div>
+                </a>
+              </Link>
+              <Link href={"/"} passHref>
+                <a>
+                  <div className={styles.link}>Сертификаты</div>
+                </a>
+              </Link>
+              <Link href="/privacy-policy" passHref>
                 <a className={styles.link}>Политика конфиденциальности</a>
               </Link>
             </div>
@@ -106,6 +131,18 @@ export default function Footer() {
                 <span style={{ marginLeft: "10px" }}>
                   г. Бишкек, Раззакова / Боконбаева 113, <br /> БЦ “Альтаир”,
                   3-этаж.
+                </span>
+              </div>
+              <div className={styles.link} href="#">
+                <Location />
+                <span style={{ marginLeft: "10px" }}>
+                  г. Бишкек, рынок «Орто-Сай», Суеркулова 5/1
+                </span>
+              </div>
+              <div className={styles.link} href="#">
+                <Location />
+                <span style={{ marginLeft: "10px" }}>
+                  г. Бишкек, Чуй/ Кулиева 20, ТЦ “Жан-Сали”, 5 этаж
                 </span>
               </div>
             </div>

@@ -32,19 +32,12 @@
 }
 
 .row {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 20px; */
   display: flex;
   justify-content: space-evenly;
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
 }
 .link {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 18px;
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -53,7 +46,7 @@
   font-size: 20px;
   color: #fff;
   margin-bottom: 40px;
-  font-weight: 500 medium;
+  font-weight: 500;
   width: 160px;
 }
 

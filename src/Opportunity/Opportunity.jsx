@@ -17,22 +17,22 @@ export default function Opportunity() {
           <span className={styles.stat}>
             <strong className={styles.strong_name}>1300+</strong> <br /> <br />
             Планировок <br /> квартир
-            <div className={styles.circle}></div>
+            <div className={styles.circle} />
           </span>
           <span className={styles.stat}>
             <strong className={styles.strong_name}>74+</strong> <br /> <br />
             Реализовано <br /> обьектов
-            <div className={styles.circle}></div>
+            <div className={styles.circle} />
           </span>
           <span className={styles.stat}>
             <strong className={styles.strong_name}>380+</strong> <br /> <br />
             Счастливых <br /> клиентов
-            <div className={styles.circle}></div>
+            <div className={styles.circle} />
           </span>
           <span className={styles.stat}>
             <strong className={styles.strong_name}>216+</strong> <br /> <br />
             Строительных <br /> бригад
-            <div className={styles.circle}></div>
+            <div className={styles.circle} />
           </span>
         </div>
         <div className={styles.opportunity_text}>
@@ -49,14 +49,14 @@ export default function Opportunity() {
           </div>
         </div>
         <div ref={domnode} className={styles.contact}>
-          <div className={styles.contact_us}>
-            <div>
-              <W />
-            </div>
-            <div>
-              <M />
-            </div>
-          </div>
+          {/*<div className={styles.contact_us}>*/}
+          {/*  <div>*/}
+          {/*    <W />*/}
+          {/*  </div>*/}
+          {/*  <div>*/}
+          {/*    <M />*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
       </div>
 

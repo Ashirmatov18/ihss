@@ -142,3 +142,10 @@
   font-style: normal;
   font-weight: 700;
 }
+
+a,
+button {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}

@@ -3,25 +3,20 @@
   background-image: url("../assets/img/catal.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  min-width: 98.9vw;
+  margin: 0 calc(50% - 50vw);
+  padding: 0 calc(50vw - 50%);
+  display: flex;
+  align-items: center;
 }
 
 .take_res {
-  width: 710px;
+  width: calc((50vw - 50%) + 50%);
+  min-width: 710px;
+  margin: 0 0 0 calc(50% - 50vw);
   height: 394px;
-  /* background-color: #fff; */
-  /* opacity: 0.7; */
   background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 10px;
-  /* margin-top: 210px; */
-}
-
-.button_play {
-  border: 50%;
-  background-color: #00512e;
-  color: white;
+  border-radius: 0 10px 10px 0;
 }
 
 .res_but {
@@ -33,10 +28,6 @@
   font-weight: 600;
   border-radius: 10px;
   border: 0;
-}
-
-.main_res {
-  padding-top: 215px;
 }
 
 .calc_title_name {
@@ -51,7 +42,24 @@
   margin-left: calc(50% - 50vw);
   height: 9px;
   background-color: #00512e;
+} /*
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
+html *,
+html *:before,
+html *:after {
+  box-sizing: inherit;
+} */
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e6e6e6;
+} */
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -61,13 +69,11 @@
 }
 .card {
   width: 320px;
-  margin: 10px;
+  margin: 10px 40px 50px 0;
   background-color: white;
-  box-shadow: 0px 68px 41px rgba(0, 0, 0, 0.01),
-    0px 30px 30px rgba(0, 0, 0, 0.02), 0px 8px 17px rgba(0, 0, 0, 0.02),
-    0px 0px 0px rgba(0, 0, 0, 0.02);
-  margin-right: 40px;
-  margin-top: 50px;
+  box-shadow: 0 68px 41px rgba(0, 0, 0, 0.01),
+    0 30px 30px rgba(0, 0, 0, 0.02), 0 8px 17px rgba(0, 0, 0, 0.02),
+    0 0 0 rgba(0, 0, 0, 0.02);
 }
 .card:hover .card__caption {
   top: 50%;
@@ -99,6 +105,11 @@
   content: "";
   width: 100%;
   height: 100%;
+  /* background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(255, 255, 255, 0) 100%
+  ); */
   transition: 0.3s;
 }
 
@@ -111,9 +122,11 @@
   z-index: 1;
   color: white;
   transform: translateY(-50%);
+  /* text-align: center; */
   padding-left: 15px;
   transition: 0.3s;
   border-radius: 10px;
+  /* padding-top: 70px; */
 }
 
 .card__title {
@@ -131,6 +144,7 @@
 .card__snippet {
   display: -webkit-box;
   max-height: 150px;
+  /* margin: 10px 0; */
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -143,9 +157,12 @@
 
 .card__button {
   display: inline-block;
+  /* padding: 10px 20px; */
   color: white;
+  /* border: 1px solid white; */
   font-family: "Roboto", sans-serif;
   font-size: 12px;
+  /* text-transform: uppercase; */
   text-decoration: none;
   transition: 0.3s;
   background-color: #ffd600;
@@ -179,12 +196,12 @@
   color: #755d87;
   text-decoration: none;
 }
-.card__caption {
-  top: calc(100% - 110px);
-  transform: unset;
-}
 
 @media (min-width: 1024px) {
+  .card__caption {
+    top: calc(100% - 110px);
+    transform: unset;
+  }
   .card__snippet {
     margin: 60px 0;
   }
@@ -200,8 +217,10 @@
   }
   .take_res {
     width: 100%;
+    margin: 0;
+    border-radius: 10px;
+    min-width: unset;
   }
-
   .halal_icon {
     display: flex;
     justify-content: center;
@@ -222,8 +241,5 @@
     width: 90%;
     margin-left: 0;
     margin-bottom: 50px;
-  }
-  .take_res {
-    width: auto;
   }
 }

@@ -13,28 +13,23 @@ export default function Residential() {
   return (
     <div>
       <div className={styles.first_residen}>
-        <div className={styles.main_res}>
-          <div className={styles.take_res}>
-            <div
-              className={styles.halal_icon}
-              style={{ paddingLeft: "130px", paddingTop: "30px" }}
-            >
-              <Image src={halal} />
-            </div>
-            <h1
-              style={{
-                paddingLeft: "130px",
-                fontFamily: '"Inter", sans-serif',
-              }}
-            >
-              Приобретение жилья <br /> сегодня с рассрочкой <br /> на 10 лет 0%
-            </h1>
-            <div
-              className={styles.button_style}
-              style={{ paddingLeft: "130px" }}
-            >
-              <button className={styles.res_but}>Перейти</button>
-            </div>
+        <div className={styles.take_res}>
+          <div
+            className={styles.halal_icon}
+            style={{ paddingLeft: "130px", paddingTop: "30px" }}
+          >
+            <Image src={halal} />
+          </div>
+          <h1
+            style={{
+              paddingLeft: "130px",
+              fontFamily: '"Inter", sans-serif',
+            }}
+          >
+            Приобретение жилья <br /> сегодня с рассрочкой <br /> на 10 лет 0%
+          </h1>
+          <div className={styles.button_style} style={{ paddingLeft: "130px" }}>
+            <button className={styles.res_but}>Перейти</button>
           </div>
         </div>
       </div>

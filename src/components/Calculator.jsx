@@ -1,28 +1,34 @@
-import React from "react";
+import React, { useMemo } from "react";
 import styles from "../styles/calc.module.css";
 import Box from "@mui/material/Box";
 import Slider from "@mui/material/Slider";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import Button from "@mui/material/Button";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import Image from "next/image";
 import { Usd, Eur, Rub, Auto, Home } from "../Calculator/CalculatorIcons";
-import Line from "../../public/img/Line.png";
 
 export default function Calculator() {
-  const [age, setAge] = React.useState("");
+  const [months, setMonths] = React.useState("none");
   const [currency, setCurrency] = React.useState("usd");
   const [paymentPercent, setPaymentPercent] = React.useState(50);
-  const [costValue, setCostValue] = React.useState(1000);
+  const [costValue, setCostValue] = React.useState(10000);
+  const initialFee = useMemo(
+    () => ((costValue || 0) * ((paymentPercent || 0) / 100)).toFixed(0),
+    [costValue, paymentPercent]
+  );
   const [calculationResult, setCalculationResult] = React.useState({
     cost: costValue,
     firstPayment: (paymentPercent * costValue) / 100,
+    initialFee,
+    entrance: (costValue * 0.07 || 0).toFixed(0),
+    companyFinancing: costValue - (paymentPercent * costValue) / 100,
+    monthly: 0,
   });
 
   const handleClickCur = (newCurrency) => () => {
+    setCostValue(10000);
     setCurrency(newCurrency);
   };
 
@@ -31,14 +37,27 @@ export default function Calculator() {
   };
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setMonths(event.target.value);
   };
 
+  const currencySym = useMemo(
+    () => (currency === "usd" ? "$" : currency === "som" ? "c" : "р"),
+    [currency]
+  );
+
   const handleCalculation = () => {
-    setCalculationResult((prevCalculation) => {
+    const firstPayment = (paymentPercent * costValue) / 100;
+    const monthly = (
+      months !== "none" ? (costValue - firstPayment) / months : 0
+    ).toFixed(1);
+    setCalculationResult(() => {
       return {
         cost: costValue,
-        firstPayment: ((paymentPercent * costValue) / 100).toFixed(0),
+        firstPayment,
+        initialFee,
+        entrance: (costValue * 0.07).toFixed(0),
+        companyFinancing: costValue - firstPayment,
+        monthly,
       };
     });
   };
@@ -74,21 +93,20 @@ export default function Calculator() {
             </button>
           </div>
           <div style={{ marginTop: "50px" }}>
-            <h2 style={{ color: "#00512E" }}>Стоимость - {costValue}$ </h2>
-            <Box
-              width={580}
-              sx={{
-                width: 300,
-              }}
-            >
+            <h2 style={{ color: "#00512E" }}>
+              Стоимость - {costValue}
+              {currencySym}{" "}
+            </h2>
+            <Box>
               <Slider
                 sx={{
-                  width: 300,
+                  width: "100%",
                   color: "#FFD600",
                 }}
-                min={1000}
-                max={10000}
+                min={10000}
+                max={currency === "usd" ? 200000 : 17000000}
                 value={costValue}
+                step={100}
                 onChange={(e) => setCostValue(e.target.value)}
                 aria-label="Default"
                 valueLabelDisplay="auto"
@@ -147,42 +165,44 @@ export default function Calculator() {
               >
                 50%
               </Button>
-              <Button className={styles.last_but}>2500$</Button>
+              <Button className={styles.last_but}>
+                {initialFee}
+                {currencySym}
+              </Button>
             </ButtonGroup>
           </div>
           <div>
             <h2>Срок договора</h2>
             <Box sx={{ minWidth: 120 }}>
-              <FormControl fullWidth>
-                <InputLabel
-                  style={{
-                    color: "white",
-                    fontSize: "18px",
-                    border: "0",
-                  }}
-                  id="demo-simple-select-label"
-                >
+              <Select
+                fullWidth
+                style={{
+                  backgroundColor: "#00512E",
+                  color: "white",
+                  borderRadius: "10px",
+                }}
+                value={months}
+                onChange={handleChange}
+              >
+                <MenuItem style={{ display: "none" }} value={"none"}>
                   Срок
-                </InputLabel>
-                <Select
-                  style={{
-                    backgroundColor: "#00512E",
-                    color: "white",
-                    borderRadius: "10px",
-                  }}
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  value={age}
-                  label="Age"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={10}>1 год</MenuItem>
-                  <MenuItem value={20}>2 года</MenuItem>
-                  <MenuItem value={30}>3 года</MenuItem>
-                  <MenuItem value={40}>4 года</MenuItem>
-                  <MenuItem value={50}>5 лет</MenuItem>
-                </Select>
-              </FormControl>
+                </MenuItem>
+                {/*{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((year) => (*/}
+                {/*  <MenuItem key={`finance-${year}`} value={year * 12}>*/}
+                {/*    {year} год*/}
+                {/*  </MenuItem>*/}
+                {/*))}*/}
+                <MenuItem value={12}>1 год</MenuItem>
+                <MenuItem value={24}>2 года</MenuItem>
+                <MenuItem value={36}>3 года</MenuItem>
+                <MenuItem value={48}>4 года</MenuItem>
+                <MenuItem value={60}>5 лет</MenuItem>
+                <MenuItem value={72}>6 лет</MenuItem>
+                <MenuItem value={84}>7 лет</MenuItem>
+                <MenuItem value={96}>8 лет</MenuItem>
+                <MenuItem value={108}>9 лет</MenuItem>
+                <MenuItem value={120}>10 лет</MenuItem>
+              </Select>
             </Box>
             <button className={styles.compute} onClick={handleCalculation}>
               Рассчитать
@@ -267,41 +287,50 @@ export default function Calculator() {
                 <div className={styles.point}>
                   <span className={styles.point_name}>
                     Стоимость Недвижимости:
-                    <Image src={Line} />
                   </span>
-                  <span className={styles.point_price}>
-                    {calculationResult.cost}$
-                  </span>
+                  <div className={styles.point_price}>
+                    <div />
+                    {calculationResult.cost}
+                    {currencySym}
+                  </div>
                 </div>
                 <div className={styles.point}>
                   <span className={styles.point_name}>
                     Первоначальный взнос:
-                    <Image src={Line} />
                   </span>
-                  <span className={styles.point_price}>
-                    {calculationResult.firstPayment}$
-                  </span>
+                  <div className={styles.point_price}>
+                    <div />
+                    {calculationResult.firstPayment}
+                    {currencySym}
+                  </div>
                 </div>
                 <div className={styles.point}>
                   <span className={styles.point_name}>
                     Вступительный взнос:
-                    <img className={styles.img_point} src="/img/Line.png" />
                   </span>
-                  <span className={styles.point_price}>1335$</span>
+                  <div className={styles.point_price}>
+                    <div />
+                    {calculationResult.entrance}
+                    {currencySym}
+                  </div>
                 </div>
                 <div className={styles.point}>
                   <span className={styles.point_name}>
                     Сумма финансирования:
-                    <Image src={Line} />
                   </span>
-                  <span className={styles.point_price}>11335$</span>
+                  <div className={styles.point_price}>
+                    <div />
+                    {calculationResult.companyFinancing}
+                    {currencySym}
+                  </div>
                 </div>
                 <div className={styles.point}>
-                  <span className={styles.point_name}>
-                    Ежемесячный платеж:
-                    <Image src={Line} />
-                  </span>
-                  <span className={styles.point_price}>1180$</span>
+                  <span className={styles.point_name}>Ежемесячный платеж:</span>
+                  <div className={styles.point_price}>
+                    <div />
+                    {calculationResult.monthly}
+                    {currencySym}
+                  </div>
                 </div>
               </div>
             </div>
