@@ -41,7 +41,7 @@ export default function Team() {
                   />
                 )}
                 <div className={styles.titleP_main}>
-                  <h4 className={styles.title_name}>{name}т</h4>
+                  <h4 className={styles.title_name}>{name}</h4>
                   <span className={styles.mini_desc}>{who_is}</span>
                 </div>
               </div>

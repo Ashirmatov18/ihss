@@ -86,6 +86,16 @@ export default function Navbar() {
                     </div>
 
                     <div className={styles.navbar_info}>
+                      <Link href="/" passHref>
+                        <Typography
+                          className={styles.about}
+                          variant="h6"
+                          color="inherit"
+                          component="a"
+                        >
+                          Главная
+                        </Typography>
+                      </Link>
                       <Link href="/team" passHref>
                         <Typography
                           className={styles.about}
@@ -138,16 +148,6 @@ export default function Navbar() {
                           Контакты
                         </Typography>
                       </Link>
-                    </div>
-                    <div>
-                      <Button
-                        className={styles.button_construction}
-                        variant="h6"
-                        component="div"
-                        style={{ pointerEvents: "none" }}
-                      >
-                        ihsan construction
-                      </Button>
                     </div>
 
                     {/* <div className={styles.search_icon}>

@@ -31,7 +31,11 @@ export default function Residential() {
             ставкой
           </h1>
           <div className={styles.button_style} style={{ paddingLeft: "130px" }}>
-            <button className={styles.res_but}>Перейти</button>
+            <Link href={"/programs"} passHref>
+              <a>
+                <button className={styles.res_but}>Перейти</button>
+              </a>
+            </Link>
           </div>
         </div>
       </div>

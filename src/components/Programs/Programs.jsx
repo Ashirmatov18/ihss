@@ -31,19 +31,19 @@ export default function Programs() {
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>7%</h4>
+              <h4>25%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>7%</h4>
+              <h4>850000 сом - 2500000 сом</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>7%</h4>
+              <h4>По очерёдности</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
-              <h4>7%</h4>
+              <h4>10 лет</h4>
             </div>
           </div>
         </div>
@@ -51,37 +51,6 @@ export default function Programs() {
         <div className={styles.program_percentage}>
           <div className={styles.program_traffic}>
             <h2>Удобный</h2>
-            <div className={styles.tarif}>
-              <h3>25+7%</h3>
-            </div>
-          </div>
-          <div className={styles.efficiency}>
-            <div>
-              <span>Единонаразовая комиссия</span>
-              <h4>7%</h4>
-            </div>
-            <div>
-              <span>Первоначальный взнос</span>
-              <h4>7%</h4>
-            </div>
-            <div>
-              <span>Сумма финансирования</span>
-              <h4>7%</h4>
-            </div>
-            <div>
-              <span>Срок наступления очереди</span>
-              <h4>7%</h4>
-            </div>
-            <div>
-              <span>Срок рассрочки</span>
-              <h4>7%</h4>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.program_percentage}>
-          <div className={styles.program_traffic}>
-            <h2>Выгодный</h2>
             <div className={styles.tarif}>
               <h3>35+7%</h3>
             </div>
@@ -93,19 +62,50 @@ export default function Programs() {
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>7%</h4>
+              <h4>35%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>7%</h4>
+              <h4>850000 сом - 4000000 сом</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>7%</h4>
+              <h4>По очерёдности</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
+              <h4>10 лет</h4>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.program_percentage}>
+          <div className={styles.program_traffic}>
+            <h2>Выгодный</h2>
+            <div className={styles.tarif}>
+              <h3>50+7%</h3>
+            </div>
+          </div>
+          <div className={styles.efficiency}>
+            <div>
+              <span>Единонаразовая комиссия</span>
               <h4>7%</h4>
+            </div>
+            <div>
+              <span>Первоначальный взнос</span>
+              <h4>50%</h4>
+            </div>
+            <div>
+              <span>Сумма финансирования</span>
+              <h4>850000 сом - 5500000 сом</h4>
+            </div>
+            <div>
+              <span>Срок наступления очереди</span>
+              <h4>По очерёдности</h4>
+            </div>
+            <div>
+              <span>Срок рассрочки</span>
+              <h4>10 лет</h4>
             </div>
           </div>
         </div>
@@ -124,19 +124,19 @@ export default function Programs() {
             </div>
             <div>
               <span>Первоначальный взнос</span>
-              <h4>7%</h4>
+              <h4>50%</h4>
             </div>
             <div>
               <span>Сумма финансирования</span>
-              <h4>7%</h4>
+              <h4>400000 сом - 1700000 сом</h4>
             </div>
             <div>
               <span>Срок наступления очереди</span>
-              <h4>7%</h4>
+              <h4>По очерёдности</h4>
             </div>
             <div>
               <span>Срок рассрочки</span>
-              <h4>7%</h4>
+              <h4>10 лет</h4>
             </div>
           </div>
         </div>

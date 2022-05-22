@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "../styles/opportunity.module.css";
+import Link from "next/link";
 
 export default function Opportunity() {
-  const [modal,] = useState(false);
+  const [modal] = useState(false);
 
   return (
     <div className={styles.main_info}>
@@ -30,15 +31,17 @@ export default function Opportunity() {
           </span>
         </div>
         <div className={styles.opportunity_text}>
-          <div className={styles.halal}>
-            {/*<img src="/img/halal.png" alt="" />*/}
-          </div>
+          <div className={styles.halal}/>
           <div className={styles.bottom_info}>
             <h1 className={styles.main_char}>
               Возможность купить жильё <br /> по самым выгодным ценам
             </h1>
             <div className={styles.button_follow}>
-              <button className={styles.butt}>Перейти</button>
+              <Link href={"/programs"} passHref>
+                <a>
+                  <button className={styles.butt}>Перейти</button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>

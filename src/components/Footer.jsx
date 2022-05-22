@@ -1,7 +1,5 @@
 import React from "react";
 import styles from "../styles/footer.module.css";
-import Image from "next/image";
-import ihs from "../../public/img/ihs.png";
 import Link from "next/link";
 import {
   Inst,
@@ -22,7 +20,7 @@ export default function Footer() {
             <div className={styles.first_column}>
               <div className={styles.column}>
                 <div className={styles.title}>
-                  <Image src={ihs} />
+                  <div className={styles.f_logo}/>
                 </div>
                 <div className={styles.link}>
                   Жилищный Кооператив <br /> Ихсан - это добровольное <br />{" "}
@@ -63,11 +61,6 @@ export default function Footer() {
                   <div className={styles.link}>О нас</div>
                 </a>
               </Link>
-              <Link href={"/"} passHref>
-                <a>
-                  <div className={styles.link}>Почему мы</div>
-                </a>
-              </Link>
               <Link href={"/review"} passHref>
                 <a>
                   <div className={styles.link}>Отзывы</div>
@@ -78,25 +71,15 @@ export default function Footer() {
                   <div className={styles.link}>Новости</div>
                 </a>
               </Link>
-              <Link href={"/"} passHref>
-                <a>
-                  <div className={styles.link}>Сертификаты</div>
-                </a>
-              </Link>
               <Link href="/privacy-policy" passHref>
                 <a className={styles.link}>Политика конфиденциальности</a>
               </Link>
-            </div>
-            <div className={styles.column}>
-              <div className={styles.title}>Наши услуги</div>
+
               <Link href={"/programs"} passHref>
                 <a>
                   <div className={styles.link}>Программы</div>
                 </a>
               </Link>
-              <div className={styles.link}>Гарантии</div>
-              <div className={styles.link}>Преимущества</div>
-              <div className={styles.link}>Условия</div>
             </div>
             <div className={styles.column}>
               <div className={styles.title}>Контакты</div>
@@ -112,7 +95,21 @@ export default function Footer() {
               </div>
               <div className={styles.link}>
                 <Phone />
-                <span style={{ marginLeft: "10px" }}>+996-(555)-555-555</span>
+                <a href="tel:+996700005151">
+                  <span style={{ marginLeft: "10px" }}>+996 700 00 51 51</span>
+                </a>
+              </div>
+              <div className={styles.link}>
+                <Phone />
+                <a href="tel:+996700005151">
+                  <span style={{ marginLeft: "10px" }}>+996 700 00 51 51</span>
+                </a>
+              </div>
+              <div className={styles.link}>
+                <Phone />
+                <a href="tel:+996700005151">
+                  <span style={{ marginLeft: "10px" }}>+996 700 00 51 51</span>
+                </a>
               </div>
               <div className={styles.link}>
                 <Location />
@@ -144,3 +141,4 @@ export default function Footer() {
     </MainLayout>
   );
 }
+
