@@ -15,11 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Ihsan</title>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap"
-          rel="stylesheet"
-        />
+        <title>Ихсан - Главная</title>
       </Head>
       <main>
         <MainLayout>

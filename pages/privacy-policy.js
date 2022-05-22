@@ -7,7 +7,7 @@ function PrivacyPolicy() {
   return (
     <>
       <Head>
-        <title>News</title>
+        <title>Ихсан - Политика конфиденциальности</title>
       </Head>
       <main>
         <Navbar />

@@ -7,9 +7,9 @@ import MainLayout from "../src/components/ui/MainLayout";
 
 export default function programs() {
   return (
-    <div>
+    <>
       <Head>
-        <title>Программы</title>
+        <title>Ихсан - Программы</title>
       </Head>
       <MainLayout>
         <main>
@@ -18,6 +18,6 @@ export default function programs() {
           <Footer />
         </main>
       </MainLayout>
-    </div>
+    </>
   );
 }

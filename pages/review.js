@@ -9,7 +9,7 @@ export default function programs() {
   return (
     <div>
       <Head>
-        <title>Программы</title>
+        <title>Ихсан - Отзывы</title>
       </Head>
       <MainLayout>
         <main>

@@ -9,7 +9,7 @@ export default function news() {
   return (
     <>
       <Head>
-        <title>Team</title>
+        <title>Ихсан - О нас</title>
       </Head>
       <MainLayout>
         <main>
