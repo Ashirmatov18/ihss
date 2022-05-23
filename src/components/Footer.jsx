@@ -20,7 +20,7 @@ export default function Footer() {
             <div className={styles.first_column}>
               <div className={styles.column}>
                 <div className={styles.title}>
-                  <div className={styles.f_logo}/>
+                  <div className={styles.f_logo} />
                 </div>
                 <div className={styles.link}>
                   Жилищный Кооператив <br /> Ихсан - это добровольное <br />{" "}
@@ -66,7 +66,7 @@ export default function Footer() {
                   <div className={styles.link}>Отзывы</div>
                 </a>
               </Link>
-              <Link href={"/index"} passHref>
+              <Link href={"/news"} passHref>
                 <a>
                   <div className={styles.link}>Новости</div>
                 </a>
@@ -141,4 +141,3 @@ export default function Footer() {
     </MainLayout>
   );
 }
-

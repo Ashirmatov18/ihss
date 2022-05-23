@@ -50,7 +50,7 @@ export default function Team() {
       </div>
 
       <div className={styles.aboutWrapper}>
-        {about?.length &&
+        {!!about?.length &&
           about.map(({ id, image, title, name, content }) => (
             <div className={styles.first_team} key={`abouts-${id}`}>
               <div
