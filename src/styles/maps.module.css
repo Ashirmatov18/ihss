@@ -3,7 +3,7 @@
 }
 
 .calc_title_name {
-  font-weight: 700 bold;
+  font-weight: 700;
   font-size: 48px;
   height: 58px;
   margin-bottom: 0;
@@ -17,10 +17,9 @@
 }
 
 .kg_map_info {
-  margin-top: 70px;
-  margin-left: 130px;
-  display: flex;
-  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 86px auto;
+  margin-top: 100px;
 }
 
 .kg_map_info span {
@@ -50,48 +49,51 @@
 }
 
 .russian_map {
-  margin-bottom: 200px;
   display: flex;
   justify-content: flex-end;
-  margin-right: 100px;
+}
+.russian_map svg {
+  width: 100%;
 }
 
 .info_contacts {
-  width: 517px;
-  border-radius: 10px;
+  max-width: 517px;
+  width: 100%;
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.07);
   color: #008045;
-  position: absolute;
   z-index: 99;
   background-color: #ffff;
-  margin-left: 600px;
-  margin-top: -300px;
   padding: 35px 25px;
   border-radius: 10px;
 }
 
+.info_contacts h4 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #008045;
+  margin: 0;
+}
+
 .info_kg {
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  display: grid;
+  grid-template: 65px / auto 150px;
+  grid-gap: 11px;
   font-size: 12px;
   margin-top: 20px !important;
-  /* margin: 0 auto; */
 }
 
 .street_info {
-  width: 340px;
-  height: 65px;
   background-color: #008045;
   color: #fff;
-  /* text-align: center; */
-  /* align-items: center; */
-  /* text-align: center; */
-  padding: 15px 25px;
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
 }
 
 .phone_info {
-  width: 114px;
-  height: 65px;
   background-color: #008045;
   color: #fff;
   text-align: center !important;
@@ -99,7 +101,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 15px 5px;
+  padding: 15px 10px;
 }
 .phone_info div {
   margin-top: 5px;
@@ -118,19 +120,21 @@
   justify-content: center;
 }
 
-@media only screen and (max-width: 1600px) {
-  .main_map {
-    width: 80vh !important;
-  }
+.map_style {
+  display: flex;
+  flex-direction: column;
 }
 
-@media only screen and (max-width: 1300px) {
-  .info_contacts {
-    margin-left: 400px;
-    margin-top: -400px;
-  }
+.mapDetailWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
 }
 
+.kgMap {
+  width: 100%;
+}
 @media only screen and (max-width: 1200px) {
   .main_map {
     width: 50vh !important;
@@ -140,40 +144,15 @@
     margin-top: 50px;
     text-align: center;
   }
-  .russian_map {
-    width: 300px;
-  }
   .map_style {
     display: flex !important;
     justify-content: center !important;
   }
 }
 
-@media only screen and (max-width: 950px) {
-  .info_contacts {
-    margin-left: 200px;
-    width: 400px;
-  }
-  .street_info {
-    height: 95px;
-    width: 200px;
-  }
-  .phone_info {
-    height: 95px;
-  }
-  .kg_map_info {
-    display: flex;
-    justify-content: center;
-    margin-left: 0;
-  }
-  .rus_map_info {
-    justify-content: center;
-  }
-}
-
 @media only screen and (max-width: 800px) {
-  .main_map {
-    width: 50vh !important;
+  .russian_map > div {
+    width: 100%;
   }
 }
 
@@ -185,25 +164,10 @@
     width: 100%;
     margin-top: 90px;
   }
-  .info_contacts {
-    margin-left: auto;
-  }
 }
 
 @media only screen and (max-width: 500px) {
   .kg_map {
     width: 400px;
-  }
-  .info_contacts {
-    width: 300px;
-    padding: 0;
-  }
-  .street_info {
-    height: 110px;
-    width: 160px;
-  }
-  .phone_info {
-    height: 110px;
-    width: 110px;
   }
 }
