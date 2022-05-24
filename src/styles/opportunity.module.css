@@ -1,6 +1,12 @@
 .main_info {
   min-height: 700px;
-  background-image: url("/img/main_info.png");
+  background-image: linear-gradient(
+      201deg,
+      rgba(0, 0, 0, 0.3032606792717087) 0%,
+      rgba(1, 0, 13, 0.54) 42%,
+      rgba(2, 0, 36, 0.7337928921568627) 100%
+    ),
+    url("/img/main_info.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Inter", sans-serif;
@@ -21,10 +27,9 @@
 .info_stats {
   display: grid;
   color: white;
-  grid-template: 1fr / repeat(4, min-content);
+  grid-template: 1fr / repeat(2, min-content);
   justify-content: flex-end;
   grid-column-gap: 80px;
-  margin-bottom: 40px;
 }
 
 .stat {
@@ -32,12 +37,18 @@
 }
 
 .bottom_info {
+  height: 100%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main_char {
+  max-width: 750px;
+  width: 100%;
   font-weight: 700;
-  font-size: 74px;
+  font-size: 40px;
   margin: 0;
   color: #ffffff;
 }
@@ -53,9 +64,6 @@
   color: #fff;
   font-weight: 600;
   font-size: 18px;
-}
-
-.opportunity_text {
 }
 
 .contact_us {
@@ -144,6 +152,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 1200px) {

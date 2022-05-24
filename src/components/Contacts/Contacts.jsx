@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styles from "../../styles/contacts.module.css";
 import { GoldLocation, GoldMobile, Mess } from "./ContactsIncon";
 import axios from "axios";
 import { API_URL } from "../../services/const";
+import dynamic from "next/dynamic";
+const Map = dynamic(() => import("./Map"), {
+  ssr: false,
+});
 
 export default function Contacts() {
   const [contacts, setContacts] = useState([]);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = () => {
+  const fetchData = useCallback(() => {
     axios
       .get(`${API_URL}/contacts/`)
       .then(({ data }) => {
@@ -20,8 +20,12 @@ export default function Contacts() {
       .catch((err) => {
         console.log(err);
       });
-  };
+  }, []);
 
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+  console.log(contacts);
   return (
     <div className={styles.main_address_title}>
       <div className={styles.calc_title}>
@@ -31,13 +35,10 @@ export default function Contacts() {
       <div className={styles.contacts_mainWrapper}>
         {!!contacts?.length &&
           contacts.map(
-            ({ id, address, title, phone_numbers, email, image }) => (
+            ({ id, address, title, phone_numbers, email, lat, lng }) => (
               <div className={styles.main_address} key={id}>
+                <Map lat={+lat} lng={+lng} />
                 <div className={styles.adress_map}>
-                  <div
-                    className={styles.contacts_image}
-                    style={{ backgroundImage: `url("${image}")` }}
-                  />
                   <div style={{ paddingLeft: "10px" }}>
                     <h4 className={styles.title_address}>{title || ""}</h4>
                     <div className={styles.contacts_wrapper}>

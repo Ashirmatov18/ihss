@@ -88,9 +88,11 @@ export default function Footer() {
                   <Message />
                 </div>
                 <div>
-                  <span style={{ marginLeft: "10px" }}>
-                    ihsangroup@gmail.io
-                  </span>
+                  <a href="mailto:ihsangroupltd@gmail.com">
+                    <span style={{ marginLeft: "10px" }}>
+                      ihsangroupltd@gmail.com
+                    </span>
+                  </a>
                 </div>
               </div>
               <div className={styles.link}>
