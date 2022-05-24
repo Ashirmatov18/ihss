@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import styles from "../../styles/styles.module.css";
-import { Button, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import { useTheme } from "@mui/material";
 import DrawerComponent from "./DrawerComponent.jsx";
@@ -13,7 +13,6 @@ import { Insta } from "./NavbarIcons";
 export default function Navbar() {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
-  const [num, setNum] = useState("+996 700 00 51 51");
 
   return (
     <nav className={styles.burger_menu}>
@@ -21,19 +20,16 @@ export default function Navbar() {
         <div className={styles.first_nav}>
           <ul className={styles.first_nav_logo}>
             <li>
-              {/*<select*/}
-              {/*  className={styles.nums}*/}
-              {/*  value={num}*/}
-              {/*  onChange={({ target: { value } }) => setNum(value)}*/}
-              {/*>*/}
-              {/*  <option value={"+996 700 00 51 51"}>+996 700 00 51 51</option>*/}
-              {/*  <option value={"+996 559 00 51 51"}>+996 559 00 51 51</option>*/}
-              {/*  <option value={"+996 778 00 51 51"}>+996 778 00 51 51</option>*/}
-              {/*</select>*/}
               <div className={styles.phones}>
-                <p>+996 700 00 51 51</p>
-                <p>+996 559 00 51 51</p>
-                <p>+996 778 00 51 51</p>
+                <a href="tel:+996700005151">
+                  <p>+996 700 00 51 51</p>
+                </a>
+                <a href="tel:+996559005151">
+                  <p>+996 559 00 51 51</p>
+                </a>
+                <a href="tel:+996778005151">
+                  <p>+996 778 00 51 51</p>
+                </a>
               </div>
             </li>
             <li className={styles.social_network}>
