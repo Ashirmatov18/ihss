@@ -7,23 +7,42 @@
 .first_nav_logo {
   display: flex;
   justify-content: space-between;
+  grid-column-gap: 40px;
   list-style-type: none;
   padding: 0;
+}
+
+.first_nav_logo li {
+  display: flex;
+  align-items: center;
 }
 
 .search_active {
   background-color: black;
 }
 
+.phones {
+  display: flex;
+  grid-column-gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.phones p,
+.address {
+  margin: 0;
+  font-size: 14px;
+}
+
 .navbar_info {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   grid-gap: 30px;
 }
 
 .toolbar {
   display: grid;
-  grid-template-columns: min-content auto 180px;
+  grid-template-columns: 200px auto;
   padding: 0;
   grid-gap: 30px;
 }
@@ -176,4 +195,10 @@
 .popup_content {
   font-size: 18px;
   color: #00512e !important;
+}
+
+.main_logo {
+  width: 100%;
+  height: 120px;
+  background: no-repeat url("/img/main_logo.png") left / contain;
 }

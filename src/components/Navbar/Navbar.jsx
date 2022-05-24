@@ -21,15 +21,20 @@ export default function Navbar() {
         <div className={styles.first_nav}>
           <ul className={styles.first_nav_logo}>
             <li>
-              <select
-                className={styles.nums}
-                value={num}
-                onChange={({ target: { value } }) => setNum(value)}
-              >
-                <option value={"+996 700 00 51 51"}>+996 700 00 51 51</option>
-                <option value={"+996 559 00 51 51"}>+996 559 00 51 51</option>
-                <option value={"+996 778 00 51 51"}>+996 778 00 51 51</option>
-              </select>
+              {/*<select*/}
+              {/*  className={styles.nums}*/}
+              {/*  value={num}*/}
+              {/*  onChange={({ target: { value } }) => setNum(value)}*/}
+              {/*>*/}
+              {/*  <option value={"+996 700 00 51 51"}>+996 700 00 51 51</option>*/}
+              {/*  <option value={"+996 559 00 51 51"}>+996 559 00 51 51</option>*/}
+              {/*  <option value={"+996 778 00 51 51"}>+996 778 00 51 51</option>*/}
+              {/*</select>*/}
+              <div className={styles.phones}>
+                <p>+996 700 00 51 51</p>
+                <p>+996 559 00 51 51</p>
+                <p>+996 778 00 51 51</p>
+              </div>
             </li>
             <li className={styles.social_network}>
               <a
@@ -59,7 +64,7 @@ export default function Navbar() {
               </div>
             </li>
 
-            <li style={{ marginRight: "70px" }}>
+            <li className={styles.address}>
               г. Бишкек, Раззакова / Боконбаева 113, БЦ “Альтаир”, 3-этаж
             </li>
           </ul>
@@ -79,9 +84,7 @@ export default function Navbar() {
                   <Toolbar className={styles.toolbar}>
                     <div>
                       <Link href="/" passHref>
-                        <Typography variant="h6" color="inherit" component="a">
-                          <img src="/img/main_logo.png" alt="" />
-                        </Typography>
+                        <div className={styles.main_logo} />
                       </Link>
                     </div>
 

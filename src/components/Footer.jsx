@@ -102,13 +102,13 @@ export default function Footer() {
               <div className={styles.link}>
                 <Phone />
                 <a href="tel:+996700005151">
-                  <span style={{ marginLeft: "10px" }}>+996 700 00 51 51</span>
+                  <span style={{ marginLeft: "10px" }}>+996 559 00 51 51</span>
                 </a>
               </div>
               <div className={styles.link}>
                 <Phone />
                 <a href="tel:+996700005151">
-                  <span style={{ marginLeft: "10px" }}>+996 700 00 51 51</span>
+                  <span style={{ marginLeft: "10px" }}>+996 778 00 51 51</span>
                 </a>
               </div>
               <div className={styles.link}>
