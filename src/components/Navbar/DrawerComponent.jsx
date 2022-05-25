@@ -4,6 +4,7 @@ import { Insta, Twitter, Youtube } from "./NavbarIcons";
 import { Menu, MenuItem } from "@mui/material";
 import Link from "next/link";
 import Typography from "@mui/material/Typography";
+import {whatsapp} from "./Navbar";
 
 export default function DrawerComponent() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -24,15 +25,33 @@ export default function DrawerComponent() {
           </a>
         </div>
         <div className={styles.second_adaptive}>
-          <div className={styles.icons}>
-            <Insta />
-          </div>
-          <div className={styles.icons}>
-            <Twitter />
-          </div>
-          <div className={styles.icons}>
-            <Youtube />
-          </div>
+          <a
+            href="https://www.instagram.com/ihsangroup.kg/"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <div className={styles.icons}>
+              <Insta />
+            </div>
+          </a>
+          <a
+            href="https://wa.me/+996700005151"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <div className={styles.icons}>
+              {whatsapp}
+            </div>
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCnfdcLSlbHlORf6fEx6RBAA"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <div className={styles.icons}>
+              <Youtube />
+            </div>
+          </a>
         </div>
       </div>
 

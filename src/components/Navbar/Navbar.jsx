@@ -49,15 +49,13 @@ export default function Navbar() {
               >
                 <div className={styles.logo_social}>{whatsapp}</div>
               </a>
-              <div>
-                <a
-                  href="https://www.youtube.com/channel/UCnfdcLSlbHlORf6fEx6RBAA"
-                  rel="noreferrer noopener"
-                  target="_blank"
-                >
-                  <div className={styles.logo_social}>{youtube}</div>
-                </a>
-              </div>
+              <a
+                href="https://www.youtube.com/channel/UCnfdcLSlbHlORf6fEx6RBAA"
+                rel="noreferrer noopener"
+                target="_blank"
+              >
+                <div className={styles.logo_social}>{youtube}</div>
+              </a>
             </li>
 
             <li className={styles.address}>
@@ -188,7 +186,7 @@ export default function Navbar() {
   );
 }
 
-const whatsapp = (
+export const whatsapp = (
   <svg
     width="24"
     height="24"
@@ -210,7 +208,7 @@ const whatsapp = (
   </svg>
 );
 
-const youtube = (
+export const youtube = (
   <svg
     width="24"
     height="24"
